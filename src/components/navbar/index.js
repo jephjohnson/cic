@@ -24,7 +24,8 @@ class Navbar extends React.Component {
     const navLinks = [
       {route: '/about', text: 'Works'},
       {route: '/products', text: 'Profile'},
-      {route: '/contact', text: 'Contact'}
+      {route: '/contact', text: 'Contact'},
+      {route: '/how', text: 'How'}
     ];
 
     const Links = navLinks.map((b, i) =>
