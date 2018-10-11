@@ -22,37 +22,56 @@ class Navbar extends React.Component {
     const { hidden} = this.props;
 
     const navLinks = [
-      {route: '/about', text: 'Works'},
+      {route: '/', text: 'What'},
       {route: '/products', text: 'Profile'},
       {route: '/contact', text: 'Contact'},
       {route: '/how', text: 'How'}
     ];
 
     const Links = navLinks.map((b, i) =>
-      <Link key={i} to={b.route} activeStyle={{color: 'red'}} className="navbar-item">{b.text}</Link>
+      <Link key={ i } to={b.route} activeStyle={{color: 'red'}} className="link is-info navbar-item is-hidden-tablet">
+        {b.text}
+      </Link>
     );
+
+    const Links1 = navLinks.slice(0, 2).map((b, i) =>
+      <p key={ i } className="level-item has-text-centered is-hidden-touch">
+        <Link to={b.route} activeStyle={{color: 'red'}} className="link is-info">
+          {b.text}
+        </Link>
+      </p>
+    );
+
+    const Links2 = navLinks.slice(-2).map((b, i) =>
+    <p key={ i } className="level-item has-text-centered is-hidden-touch">
+      <Link to={b.route} activeStyle={{color: 'red'}} className="link is-info">
+        {b.text}
+      </Link>
+    </p>
+  );
 
     return (
       <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
-              <figure className="image">
-                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-              </figure>
-            </Link>
-            <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
+        <div className="level container">
+          { Links1 }
+          <div className="navbar-brand level-item has-text-centered">
+              <Link to="/" className="navbar-item">
+                <figure className="image">
+                  <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+                </figure>
+              </Link>
+              <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
           </div>
           <div id="navMenu" onClick={this.toggleDiv.bind(this)} className={CN('navbar-menu', {'is-active': hidden})}>
             <div className="navbar-end">
               {Links}
             </div>
           </div>
+          { Links2 }
         </div>
       </nav>
     )
   }
-  
 }
 
 export default connect(
@@ -60,32 +79,5 @@ export default connect(
   mapDispatchToProps
 )(Navbar)
 
-{/* <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <div className="level container">
-        <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
-              <figure className="image">
-                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-              </figure>
-            </Link>
-            <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
-          </div>
-        <p className="level-item has-text-centered">
-          <a className="link is-info">Home</a>
-        </p>
-        <p className="level-item has-text-centered">
-          <a className="link is-info">Menu</a>
-        </p>
-        <p className="level-item has-text-centered">
-          <img src="https://bulma.io/images/bulma-type.png" alt="" style={{ height: '30px' }} />
-        </p>
-        <p className="level-item has-text-centered">
-          <a className="link is-info">Reservations</a>
-        </p>
-        <p className="level-item has-text-centered">
-          <a className="link is-info">Contact</a>
-        </p>
-        </div>
-      </nav> */}
 
 
