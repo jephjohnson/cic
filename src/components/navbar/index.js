@@ -60,4 +60,32 @@ export default connect(
   mapDispatchToProps
 )(Navbar)
 
+{/* <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div className="level container">
+        <div className="navbar-brand">
+            <Link to="/" className="navbar-item">
+              <figure className="image">
+                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              </figure>
+            </Link>
+            <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
+          </div>
+        <p className="level-item has-text-centered">
+          <a className="link is-info">Home</a>
+        </p>
+        <p className="level-item has-text-centered">
+          <a className="link is-info">Menu</a>
+        </p>
+        <p className="level-item has-text-centered">
+          <img src="https://bulma.io/images/bulma-type.png" alt="" style={{ height: '30px' }} />
+        </p>
+        <p className="level-item has-text-centered">
+          <a className="link is-info">Reservations</a>
+        </p>
+        <p className="level-item has-text-centered">
+          <a className="link is-info">Contact</a>
+        </p>
+        </div>
+      </nav> */}
+
 
