@@ -19,7 +19,7 @@ const ProductPageTemplate = ({
     <div className="container">
       <div className="section">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-10">
             <div className="content">
               <div
                 className="full-width-image-container margin-top-0"
