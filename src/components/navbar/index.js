@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 import { bindActionCreators } from "redux";
 import * as toggleactionCreators from '../../actions/toggleActions';
 
-import logo from '../../img/logo.svg'
+import logo from '../../img/logo.png'
 
 const mapStateToProps = (state) => ({ hidden: state.toggle.hidden });
 const mapDispatchToProps = (dispatch) => bindActionCreators({...toggleactionCreators}, dispatch)
@@ -30,14 +30,14 @@ class Navbar extends React.Component {
     ];
 
     const Links = navLinks.map((b, i) =>
-      <Link key={ i } to={b.route} activeStyle={{color: 'red'}} className="link is-info navbar-item is-hidden-tablet">
+      <Link key={ i } to={b.route} activeStyle={{color: 'red'}} className="link is-info navbar-item is-hidden-desktop">
         {b.text}
       </Link>
     );
 
     const Links1 = navLinks.slice(0, 2).map((b, i) =>
       <p key={ i } className="level-item has-text-centered is-hidden-touch">
-        <Link to={b.route} activeStyle={{color: 'red'}} className="link is-info">
+        <Link to={b.route} activeStyle={{color: 'red',  borderBottom: '2px solid red'}} className="link is-info">
           {b.text}
         </Link>
       </p>
@@ -45,7 +45,7 @@ class Navbar extends React.Component {
 
     const Links2 = navLinks.slice(-2).map((b, i) =>
     <p key={ i } className="level-item has-text-centered is-hidden-touch">
-      <Link to={b.route} activeStyle={{color: 'red'}} className="link is-info">
+      <Link to={b.route} activeStyle={{color: 'red', borderBottom: '2px solid red'}} className="link is-info">
         {b.text}
       </Link>
     </p>
@@ -63,7 +63,7 @@ class Navbar extends React.Component {
               </Link>
               <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
           </div>
-          <div id="navMenu" onClick={this.toggleDiv.bind(this)} className={CN('navbar-menu', {'is-active': hidden})}>
+          <div id="navMenu" onClick={this.toggleDiv.bind(this)} className={CN('navbar-menu is-hidden-desktop', {'is-active': hidden})}>
             <div className="navbar-end">
               {Links}
             </div>
