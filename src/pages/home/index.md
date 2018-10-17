@@ -1,12 +1,19 @@
 ---
+<<<<<<< Updated upstream
 templateKey: home-page
 full_image: /img/chemex.jpg
 heading: "Leave the \x03expected to \x03the robots. "
+=======
+templateKey: 'home-page'
+path: /home
+full_image: /img/jumbotron.jpg
+heading: Leave the expected to robots.
+>>>>>>> Stashed changes
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Any robot can put a logo on a t-shirt.
+  We want to take things to the next level with something extraordinary. 
+  We want to be the creative partner that sparks love for your brand through
+  innovation and strategic trend spotting.
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee

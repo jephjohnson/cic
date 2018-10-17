@@ -9,29 +9,34 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="section">
-                <div className="columns">
-                  <div className="column is-10 is-offset-1">
-                    {posts
-                      .map(({ node: post }) => (
-                        <div
-                          className="content"
-                          key={post.id}
-                        >
-                          <div
-                            className="full-width-image-container margin-top-0"
-                            style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}
-                          >
-                          adfadfdf
-                          </div>
-                        </div>
-                      ))}
+        {/* <section className="section">
+          
+          </div>
+        </section> */}
+        <section className="hero is-medium">
+          {posts.map(({ node: post }) => (
+            <div className="hero-body" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}>
+              <div className="container">
+                <div className="columns is-mobile is-centered">
+                  <div className="column is-8">
+                    <div className="columns intro">
+                      <div className="column is-5">
+                        <h1 className="title">
+                          { post.frontmatter.heading }
+                        </h1>
+                      </div>
+                      <div className="column is-1 arrow">Arrow</div> 
+                      <div className="column is-5 is-offset-1">
+                        <h2 className="subtitle">
+                          { post.frontmatter.description }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </section>
       </Layout>
     )
@@ -60,7 +65,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
+            heading
+            description
             full_image
             templateKey
             date(formatString: "MMMM DD, YYYY")
