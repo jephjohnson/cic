@@ -22,8 +22,9 @@ export default class IndexPage extends React.Component {
                         >
                           <div
                             className="full-width-image-container margin-top-0"
-                            style={{ backgroundImage: `url(${post.frontmatter.image})` }}
+                            style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}
                           >
+                          adfadfdf
                           </div>
                         </div>
                       ))}
@@ -49,7 +50,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "product-page" } }}
+      filter: { frontmatter: { templateKey: { eq: "home-page" } }}
     ) {
       edges {
         node {
@@ -60,7 +61,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            image
+            full_image
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }
