@@ -11,6 +11,7 @@ const BlogPostTemplate = ({
   description,
   tags,
   title,
+  image,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -24,6 +25,10 @@ const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <img
+              style={{ borderRadius: '5px' }}
+              src={image}
+            />
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
