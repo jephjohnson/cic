@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 full_image: /img/jumbotron.jpg
-heading: Leave the expected to `robots`.
+heading: Leave the expected to robots.
 description: >-
   Any robot can put a logo on a t-shirt. We want to take things to the next
   level with something extraordinary.  We want to be the creative partner that
