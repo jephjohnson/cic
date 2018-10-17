@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Jeph did the chainjskskskksks
-image: /img/jumbotron.jpg
+image: /img/coffee-gear.png
 date: 2017-01-04T15:04:10.000Z
 description: >-
   Brewing with a Chemex probably seems like a complicated, time-consuming
