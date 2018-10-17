@@ -85,6 +85,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: Full_image, name: full_image, widget: image}
-          - {label: Heading, name: heading, widget: markdown}
+          - {label: Heading, name: heading, widget: markdown, fields: [{label: Description Highlight Color, name: des_color, widget: color, format: "rgb"}]}
           - {label: Description, name: description, widget: markdown}
           - {label: Main, name: main, widget: object, fields: [{label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Description, name: description, widget: markdown}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Description, name: description, widget: markdown}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Description, name: description, widget: markdown}]}]}
