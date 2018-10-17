@@ -84,7 +84,7 @@ collections:
         name: "home"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: Image, name: image, widget: image}
+          - {label: Full_image, name: full_image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Description, name: description, widget: string}
           - {label: Main, name: main, widget: object, fields: [{label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: string}, {label: Description, name: description, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: string}, {label: Description, name: description, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: string}, {label: Description, name: description, widget: string}]}]}

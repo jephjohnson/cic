@@ -6,7 +6,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
   
     return (
     <HomePageTemplate
-      image={entry.getIn(['data', 'image'])}
+      fullImage={entry.getIn(['data', 'full_image'])}
       heading={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}
       main={{

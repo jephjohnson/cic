@@ -12,7 +12,7 @@ const HomePage = ({ data }) => {
       <HomePageTemplate
         heading={frontmatter.heading}
         description={frontmatter.description}
-        image={frontmatter.image}
+        fullImage={frontmatter.full_image}
         main={frontmatter.main}
       />
     </Layout>
@@ -35,7 +35,7 @@ export const HomePageQuery = graphql`
       frontmatter {
         heading
         description
-        image
+        full_image
         main {
           image1 {
             title

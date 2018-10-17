@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const HomePageTemplate = ({
   heading,
   description,
-  image,
+  fullImage,
   main
 }) => (
   <section className="section section--gradient">
@@ -13,9 +13,9 @@ const HomePageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
-              <div
+			  <div
                 className="full-width-image-container margin-top-0"
-                style={{ backgroundImage: `url(${image})` }}
+                style={{ backgroundImage: `url(${fullImage})` }}
               >
                 <h2
                   className="has-text-weight-bold is-size-1"
@@ -82,7 +82,7 @@ const HomePageTemplate = ({
 )
 
 HomePageTemplate.propTypes = {
-  image: PropTypes.string,
+  fullImage: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
   main: PropTypes.shape({

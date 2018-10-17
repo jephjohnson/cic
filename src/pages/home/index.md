@@ -1,7 +1,7 @@
 ---
 templateKey: 'home-page'
 path: /home
-image: /img/jumbotron.jpg
+full_image: /img/jumbotron.jpg
 heading: What we offer
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
