@@ -50,6 +50,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  image: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
 }
 
