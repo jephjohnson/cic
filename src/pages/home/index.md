@@ -1,8 +1,7 @@
 ---
-templateKey: 'home-page'
-path: /home
-full_image: /img/jumbotron.jpg
-heading: What we offer
+templateKey: home-page
+full_image: /img/chemex.jpg
+heading: "Leave the \x03expected to \x03the robots. "
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -10,18 +9,19 @@ description: >-
   anyone.
 main:
   image1:
-    title: A
-    description: A
     alt: A close-up of a paper filter filled with ground coffee
+    description: A
     image: /img/products-grid3.jpg
+    title: A
   image2:
-    title: B
-    description: B
     alt: A green cup of a coffee on a wooden table
+    description: B
     image: /img/products-grid2.jpg
+    title: B
   image3:
-    title: C
-    description: C
     alt: Coffee beans
+    description: C
     image: /img/products-grid1.jpg
+    title: C
 ---
+
