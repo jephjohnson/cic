@@ -1,14 +1,8 @@
 ---
-<<<<<<< Updated upstream
-templateKey: home-page
-full_image: /img/chemex.jpg
-heading: "Leave the \x03expected to \x03the robots. "
-=======
 templateKey: 'home-page'
 path: /home
 full_image: /img/jumbotron.jpg
 heading: Leave the expected to robots.
->>>>>>> Stashed changes
 description: >-
   Any robot can put a logo on a t-shirt.
   We want to take things to the next level with something extraordinary. 
