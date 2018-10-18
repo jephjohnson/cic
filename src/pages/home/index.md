@@ -2,7 +2,7 @@
 templateKey: home-page
 full_image: /img/products-full-width.jpg
 heading: '**Placeholder**'
-description: '''Placeholder'''
+description: b
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
