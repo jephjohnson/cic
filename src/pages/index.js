@@ -15,19 +15,15 @@ export default class IndexPage extends React.Component {
           <section className="hero is-medium" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}>
               <div className="hero-body">
                 <div className="container">
-                  <div className="columns is-mobile is-centered">
-                    <div className="column is-8">
+                  <div className="columns is-centered">
+                    <div className="column is-10-tablet is-8-desktop">
                       <div className="columns intro">
-                        <div className="column is-5">
-                          <h1 className="title is-1 has-text-centered">
-                            <ReactMarkdown source={ post.frontmatter.heading } />
-                          </h1>
+                        <div className="column">
+                            <ReactMarkdown className="title has-text-centered" source={ post.frontmatter.heading } />
                         </div>
-                        <div className="column is-1 arrow">Arrow</div> 
-                        <div className="column is-5 is-offset-1">
-                          <h3 className="subtitle has-text-centered" >
-                            <ReactMarkdown source={ post.frontmatter.description } />
-                          </h3>
+                        <div className="column is-2 arrow has-text-centered">Arrow</div> 
+                        <div className="column">
+                            <ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
                         </div>
                       </div>
                     </div>
