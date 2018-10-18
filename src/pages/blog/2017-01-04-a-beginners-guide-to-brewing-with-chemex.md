@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Jeph did the chainjskskskksks
+title: Lorem Ipsum
 image: /img/coffee-gear.png
 date: 2017-01-04T15:04:10.000Z
 description: >-
