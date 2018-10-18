@@ -9,31 +9,31 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     return (
       <Layout>
-        <section className="hero is-medium">
-          {posts.map(({ node: post }) => (
-            <div className="hero-body" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}>
-              <div className="container">
-                <div className="columns is-mobile is-centered">
-                  <div className="column is-8">
-                    <div className="columns intro">
-                      <div className="column is-5">
-                        <h1 className="title">
-                          { post.frontmatter.heading }
-                        </h1>
-                      </div>
-                      <div className="column is-1 arrow">Arrow</div> 
-                      <div className="column is-5 is-offset-1">
-                        <h2 className="subtitle">
-                          { post.frontmatter.description }
-                        </h2>
+        {posts.map(({ node: post }) => (
+          <section className="hero is-medium" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}>
+              <div className="hero-body">
+                <div className="container">
+                  <div className="columns is-mobile is-centered">
+                    <div className="column is-8">
+                      <div className="columns intro">
+                        <div className="column is-5">
+                          <h1 className="title is-1 has-text-centered">
+                            { post.frontmatter.heading }
+                          </h1>
+                        </div>
+                        <div className="column is-1 arrow">Arrow</div> 
+                        <div className="column is-5 is-offset-1">
+                          <h3 className="subtitle has-text-centered">
+                            { post.frontmatter.description }
+                          </h3>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </section>
+          </section>
+        ))}
       </Layout>
     )
   }
