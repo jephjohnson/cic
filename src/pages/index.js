@@ -8,11 +8,7 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    
-    const Links = posts.map(({ node: post }) =>
-      post.frontmatter.heading
-    )
-
+   
     return (
       <Layout>
         {posts.map(({ node: post }) => (
@@ -29,7 +25,9 @@ export default class IndexPage extends React.Component {
                         </div>
                         <div className="column is-1 arrow">Arrow</div> 
                         <div className="column is-5 is-offset-1">
-                          <h3 className="subtitle has-text-centered" dangerouslySetInnerHTML={{ __html: post.frontmatter.description }} />
+                          <h3 className="subtitle has-text-centered" >
+                            <ReactMarkdown source={ post.frontmatter.description } />
+                          </h3>
                         </div>
                       </div>
                     </div>
