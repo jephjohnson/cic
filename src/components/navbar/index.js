@@ -58,7 +58,7 @@ class Navbar extends React.Component {
           <div className="navbar-brand level-item has-text-centered">
               <Link to="/" className="navbar-item">
                 <figure className="image">
-                  <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+                  <img src={logo} alt="CIC logo" style={{ width: '80px' }} />
                 </figure>
               </Link>
               <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
