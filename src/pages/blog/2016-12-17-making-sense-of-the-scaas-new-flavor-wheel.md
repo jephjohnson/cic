@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Jeph is New
+title: Lorem Ipsum
 image: /img/flavor_wheel.jpg
 date: 2016-12-17T15:04:10.000Z
 description: >-
