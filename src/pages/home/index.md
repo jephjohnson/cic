@@ -1,26 +1,11 @@
 ---
-templateKey: home-page
+templateKey: 'home-page'
 full_image: /img/hero.jpg
+path: /home
 heading: Leave the expected to the robots.
-description: >-
-  Any robot can put a logo on a t-shirt. We want to take things to the next
-  level with something extraordinary.  We want to be the creative partner that
-  sparks love for your brand through innovation and strategic trend spotting.
-main:
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    description: A
-    image: /img/products-grid3.jpg
-    title: A
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    description: B
-    image: /img/products-grid2.jpg
-    title: B
-  image3:
-    alt: Coffee beans
-    description: C
-    image: /img/products-grid1.jpg
-    title: C
 ---
+### Shade-grown coffee
+Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
 
+### Single origin
+Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
