@@ -2,7 +2,7 @@
 templateKey: home-page
 full_image: /img/hero.jpg
 heading: What we offer
-description: A
+description: '**A**'
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
