@@ -3,6 +3,8 @@ templateKey: home-page
 full_image: /img/hero.jpg
 heading: Leave the expected to the robots.
 description: |-
+  **adslkfjalskfdj**
+
   Any robot can put a logo on 
 
   a t-shirt. We want to take things
