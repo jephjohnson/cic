@@ -9,10 +9,6 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     return (
       <Layout>
-        {/* <section className="section">
-          
-          </div>
-        </section> */}
         <section className="hero is-medium">
           {posts.map(({ node: post }) => (
             <div className="hero-body" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}>
