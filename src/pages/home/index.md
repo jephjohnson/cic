@@ -1,6 +1,6 @@
 ---
 templateKey: home-page
-full_image: /img/products-full-width.jpg
+full_image: /img/hero.jpg
 heading: "Leave the \x03expected to \x03the robots."
 description: |-
   Any robot can put a logo on a 
