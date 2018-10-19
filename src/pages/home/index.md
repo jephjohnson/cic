@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 full_image: /img/hero.jpg
-heading: "# Leave the \x03expected to \x03the robots."
+heading: '## Demo is here'
 description: >-
   ### Any robot can put a logo on a t-shirt. We want to take things to the
   **next level** with something extraordinary. We want to be the **creative
