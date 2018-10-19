@@ -37,7 +37,7 @@ class Navbar extends React.Component {
 
     const Links1 = navLinks.slice(0, 2).map((b, i) =>
       <p key={ i } className="level-item has-text-centered is-hidden-touch">
-        <Link to={b.route} activeStyle={{color: 'red',  borderBottom: '2px solid red'}} className="link is-info">
+        <Link to={b.route} activeStyle={{color: 'red',  borderBottom: '3px solid red'}} className="link is-info">
           {b.text}
         </Link>
       </p>
@@ -45,7 +45,7 @@ class Navbar extends React.Component {
 
     const Links2 = navLinks.slice(-2).map((b, i) =>
     <p key={ i } className="level-item has-text-centered is-hidden-touch">
-      <Link to={b.route} activeStyle={{color: 'red', borderBottom: '2px solid red'}} className="link is-info">
+      <Link to={b.route} activeStyle={{color: 'red', borderBottom: '3px solid red'}} className="link is-info">
         {b.text}
       </Link>
     </p>

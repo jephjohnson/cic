@@ -13,25 +13,40 @@ export default class IndexPage extends React.Component {
       <Layout>
         {posts.map(({ node: post }) => (
           <section className="hero is-medium" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}>
-              <div className="hero-body">
-                <div className="container">
-                  <div className="columns is-centered">
-                    <div className="column is-10-tablet is-8-desktop">
-                      <div className="columns intro">
-                        <div className="column">
-                            <ReactMarkdown className="title has-text-centered" source={ post.frontmatter.heading } />
+            <div className="container">
+                <div className="hero-body">
+                    <div className="columns is-centered">
+                        <div className="column is-10-tablet is-9-desktop">
+                        <div className="columns intro">
+                            <div className="column">
+                                <ReactMarkdown className="title has-text-centered" source={ post.frontmatter.heading } />
+                            </div>
+                            <div className="column is-2 arrow has-text-centered">Arrow</div> 
+                            <div className="column">
+                                <ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
+                            </div>
                         </div>
-                        <div className="column is-2 arrow has-text-centered">Arrow</div> 
-                        <div className="column">
-                            <ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-          </section>
+            </div>
+          </section> 
         ))}
+        <section className="section">
+            <div className="container">
+                <div className="columns is-centered features">
+                    <div className="column is-10-tablet is-8-desktop features--outer is-paddingless">
+                        <div className="column features--inner">
+                            {/* <img
+                            style={{ borderRadius: '5px' }}
+                            src={main.image1.image}
+                            alt={main.image1.alt}
+                            /> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
       </Layout>
     )
   }
@@ -64,6 +79,11 @@ export const pageQuery = graphql`
             full_image
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            main {
+							image1 {
+								image
+							}
+            }
           }
         }
       }
