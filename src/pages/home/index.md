@@ -13,15 +13,18 @@ main:
     description: b
     image: /img/feature-1.png
     title: a
+    subtitle: a
   image2:
     alt: A green cup of a coffee on a wooden table
     description: b
     image: /img/products-grid2.jpg
     title: a
+    subtitle: a
   image3:
     alt: Coffee beans
     description: b
     image: /img/products-grid1.jpg
     title: a
+    subtitle: a
 ---
 

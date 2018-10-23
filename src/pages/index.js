@@ -96,18 +96,21 @@ export const pageQuery = graphql`
 								image
 								alt
 								title
+								subtitle
 								description
 							}
 							image2 {
 								image
 								alt
 								title
+								subtitle
 								description
 							}
 							image3 {
 								image
 								alt
 								title
+								subtitle
 								description
 							}
             }
