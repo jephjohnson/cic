@@ -18,11 +18,13 @@ main:
     alt: A green cup of a coffee on a wooden table
     description: b
     image: /img/products-grid2.jpg
+    subtitle: "LED Double-Wall \x0316oz Cola Glass"
     title: a
   image3:
     alt: Coffee beans
     description: b
     image: /img/products-grid1.jpg
+    subtitle: "LED Double-Wall \x0316oz Cola Glass"
     title: a
 ---
 
