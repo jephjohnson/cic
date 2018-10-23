@@ -40,7 +40,7 @@ export default class IndexPage extends React.Component {
 												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})` }}>
 													<div className="column is-5-desktop is-offset-7 features--text has-text-centered">
 														<h5>{post.frontmatter.main.image1.title}</h5>
-														<h6>asfdaasf</h6>
+														<h6>{post.frontmatter.main.image1.subtitle}</h6>
 														<p>{post.frontmatter.main.image1.description}</p>
 													</div>
 												</div>
