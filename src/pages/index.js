@@ -34,14 +34,15 @@ export default class IndexPage extends React.Component {
         ))}
         <section className="section">
 				{posts.map(({ node: post }) => (
-            <div className="container">
+            <div key={post.id} className="container">
 								<div className="columns is-centered features">
 										<div className="column is-10-tablet is-8-desktop features--outer is-paddingless">
-												<div className="column features--inner">
-														<img
-														src={post.frontmatter.main.image1.image}
-														alt={post.frontmatter.main.image1.alt}
-														/>
+												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})` }}>
+													<div className="column is-5-desktop is-offset-7 features--text has-text-centered">
+														<h5>{post.frontmatter.main.image1.title}</h5>
+														<h6>asfdaasf</h6>
+														<p>{post.frontmatter.main.image1.description}</p>
+													</div>
 												</div>
 										</div>
 								</div>
