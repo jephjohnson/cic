@@ -10,21 +10,19 @@ description: >-
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    description: b
+    description: Shine a light on your event!
     image: /img/feature-1.png
-    title: a
-    subtitle: a
+    subtitle: "LED Double-Wall \x0316oz Cola Glass"
+    title: Product of the Day
   image2:
     alt: A green cup of a coffee on a wooden table
     description: b
     image: /img/products-grid2.jpg
     title: a
-    subtitle: a
   image3:
     alt: Coffee beans
     description: b
     image: /img/products-grid1.jpg
     title: a
-    subtitle: a
 ---
 
