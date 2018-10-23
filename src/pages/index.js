@@ -33,19 +33,30 @@ export default class IndexPage extends React.Component {
           </section> 
         ))}
         <section className="section">
+				{posts.map(({ node: post }) => (
             <div className="container">
-                <div className="columns is-centered features">
-                    <div className="column is-10-tablet is-8-desktop features--outer is-paddingless">
-                        <div className="column features--inner">
-                            {/* <img
-                            style={{ borderRadius: '5px' }}
-                            src={main.image1.image}
-                            alt={main.image1.alt}
-                            /> */}
-                        </div>
-                    </div>
-                </div>
+								<div className="columns is-centered features">
+										<div className="column is-10-tablet is-8-desktop features--outer is-paddingless">
+												<div className="column features--inner">
+														<img
+														src={post.frontmatter.main.image1.image}
+														alt={post.frontmatter.main.image1.alt}
+														/>
+												</div>
+										</div>
+								</div>
+								<div className="columns is-centered features">
+										<div className="column is-10-tablet is-8-desktop features--outer is-paddingless">
+												<div className="column features--inner">
+														<img
+														src={post.frontmatter.main.image1.image}
+														alt={post.frontmatter.main.image1.alt}
+														/>
+												</div>
+										</div>
+								</div>
             </div>
+						))}
         </section>
       </Layout>
     )
@@ -82,6 +93,21 @@ export const pageQuery = graphql`
             main {
 							image1 {
 								image
+								alt
+								title
+								description
+							}
+							image2 {
+								image
+								alt
+								title
+								description
+							}
+							image3 {
+								image
+								alt
+								title
+								description
 							}
             }
           }
