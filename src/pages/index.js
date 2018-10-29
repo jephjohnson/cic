@@ -48,11 +48,22 @@ export default class IndexPage extends React.Component {
 								</div>
 								<div className="columns is-centered features">
 										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner pos-right" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})` }}>
+												<div className="columns features--inner pos-right" style={{ backgroundImage: `url(${post.frontmatter.main.image2.image})` }}>
 													<div className="column is-5-desktop features--text has-text-centered">
 														<h5>{post.frontmatter.main.image2.title}</h5>
 														<h6>{post.frontmatter.main.image2.subtitle}</h6>
 														<p>{post.frontmatter.main.image2.description}</p>
+													</div>
+												</div>
+										</div>
+								</div>
+								<div className="columns is-centered features">
+										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
+												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image3.image})` }}>
+													<div className="column is-5-desktop features--text has-text-centered">
+														<h5>{post.frontmatter.main.image3.title}</h5>
+														<h6>{post.frontmatter.main.image3.subtitle}</h6>
+														<p>{post.frontmatter.main.image3.description}</p>
 													</div>
 												</div>
 										</div>
