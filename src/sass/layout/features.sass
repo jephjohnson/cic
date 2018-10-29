@@ -3,7 +3,7 @@
     height: 10rem
 
     &--text
-        padding: 2rem
+        padding: 3rem 0 2rem 3rem
 
         h6, h5
             color: white
@@ -14,6 +14,7 @@
         background-repeat: no-repeat
         background-size: contain
         min-height: 9rem
+        margin: 0 auto
 
     &--inner
         background: $blue
@@ -22,8 +23,19 @@
         left: 0
         right: 0
         margin: -2rem auto auto
-        width: 65%
+        width: 75%
         background-repeat: no-repeat
-        background-size: contain  
+        background-size: contain 
+
+        +tablet
+           width: 80%
+        
+        +desktop
+           width: 82%
+        
+        +widescreen
+           width: 65%
+
+        
 
     
