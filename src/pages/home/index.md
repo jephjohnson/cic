@@ -15,16 +15,16 @@ main:
     subtitle: "LED Double-Wall \x0316oz Cola Glass"
     title: Product of the Day
   image2:
-    alt: A green cup of a coffee on a wooden table
-    description: b
-    image: /img/products-grid2.jpg
-    subtitle: "LED Double-Wall \x0316oz Cola Glass"
-    title: a
+    alt: Wear with Pride
+    description: "Let customers put \x03your brand on display."
+    image: /img/features-2.png
+    subtitle: Nike Dri-Fit Polo
+    title: Wear with Pride
   image3:
-    alt: Coffee beans
-    description: b
-    image: /img/products-grid1.jpg
-    subtitle: "LED Double-Wall \x0316oz Cola Glass"
-    title: a
+    alt: The Small Touches
+    description: "Make your brand \x03loud and clear."
+    image: /img/features-3.png
+    subtitle: Earbuds in Case
+    title: The Small Touches
 ---
 
