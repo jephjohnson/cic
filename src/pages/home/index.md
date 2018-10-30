@@ -35,6 +35,8 @@ main:
 logos: |-
   ![asdfasdfsfsfsf](/img/chemex.jpg)
 
+  ![dddddd](/img/coffee-gear.png)
+
   logosssss
 ---
 
