@@ -5,10 +5,25 @@ import Layout from '../components/layout/'
 const ReactMarkdown = require('react-markdown')
 
 export default class IndexPage extends React.Component {
-  render() {
+	
+	renderParagraph(props) {
+		const { children } = props;
+	
+		if (children && children[0]
+			&& children.length === 1
+			&& children[0].props
+			&& children[0].props.src) { // rendering media without p wrapper
+	
+			return <div className="column">{children}</div>;
+		}
+	
+		return <p>{children}</p>;
+	}
+
+	render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-   
+		const { edges: posts } = data.allMarkdownRemark
+
     return (
       <Layout>
         {posts.map(({ node: post }) => (
@@ -86,9 +101,7 @@ export default class IndexPage extends React.Component {
 					<div className="container">
 							<div className="columns is-centered">
 								{posts.map(({ node: post }) => (
-									<div key={post.id} class="column">
-										<ReactMarkdown alt={ post.frontmatter.logos.alt } source={ post.frontmatter.logos } />
-									</div>
+										<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos.alt } source={ post.frontmatter.logos } />
 								))}
 							</div>
 					</div>
