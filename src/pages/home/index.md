@@ -35,6 +35,6 @@ main:
 logos: |-
   ![asdfasdfsfsfsf](/img/chemex.jpg)
 
-  logos
+  logosssss
 ---
 
