@@ -91,6 +91,7 @@ HomePageTemplate.propTypes = {
     image1: PropTypes.object,
     image2: PropTypes.object,
     image3: PropTypes.object,
+    image4: PropTypes.object,
   })
 }
 

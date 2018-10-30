@@ -26,9 +26,12 @@ main:
     image: /img/features-3.png
     subtitle: Earbuds in Case
     title: The Small Touches
-logos: |-
-  ![gsdgsdfgsdgsdfg](/img/chemex.jpg)
-
-  ![adfasfasfsf](/img/coffee-gear.png)
+  image4:
+    alt: The Big Swings
+    description: "Swing for the fences with \x03this promotional hard-hitter!"
+    image: /img/features-4.png
+    subtitle: Earbuds in Case
+    title: The Big Swings
+logos: "logos"
 ---
 

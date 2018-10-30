@@ -67,10 +67,32 @@ export default class IndexPage extends React.Component {
 													</div>
 												</div>
 										</div>
-								</div>
+								</div>	
+								<div className="columns is-centered features">
+										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
+												<div className="columns features--inner pos-right red" style={{ backgroundImage: `url(${post.frontmatter.main.image4.image})` }}>
+													<div className="column is-5-tablet is-5-desktop features--text has-text-centered">
+														<h5>{post.frontmatter.main.image4.title}</h5>
+														<h6>{post.frontmatter.main.image4.subtitle}</h6>
+														<ReactMarkdown source={ post.frontmatter.main.image4.description } />
+													</div>
+												</div>
+										</div>
+								</div>	
             </div>
 						))}
         </section>
+				<section className="section">
+					<div className="container">
+							<div className="columns is-centered">
+								{posts.map(({ node: post }) => (
+									<div key={post.id} class="column">
+										{ post.frontmatter.logos }
+									</div>
+								))}
+							</div>
+					</div>
+				</section>
       </Layout>
     )
   }
@@ -99,7 +121,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             heading
-            description
+						description
+						logos
             full_image
             templateKey
             date(formatString: "MMMM DD, YYYY")
@@ -119,6 +142,13 @@ export const pageQuery = graphql`
 								description
 							}
 							image3 {
+								image
+								alt
+								title
+								subtitle
+								description
+							}
+							image4 {
 								image
 								alt
 								title
