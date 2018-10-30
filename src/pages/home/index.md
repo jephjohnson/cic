@@ -26,5 +26,9 @@ main:
     image: /img/features-3.png
     subtitle: Earbuds in Case
     title: The Small Touches
+logos: |-
+  ![gsdgsdfgsdgsdfg](/img/chemex.jpg)
+
+  ![adfasfasfsf](/img/coffee-gear.png)
 ---
 
