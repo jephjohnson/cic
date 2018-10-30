@@ -32,6 +32,9 @@ main:
     image: /img/features-4.png
     subtitle: Earbuds in Case
     title: The Big Swings
-logos: "logos"
+logos: |-
+  ![asdfasdfsfsfsf](/img/chemex.jpg)
+
+  logos
 ---
 
