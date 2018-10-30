@@ -87,7 +87,7 @@ export default class IndexPage extends React.Component {
 							<div className="columns is-centered">
 								{posts.map(({ node: post }) => (
 									<div key={post.id} class="column">
-										{ post.frontmatter.logos }
+										<ReactMarkdown alt={ post.frontmatter.logos.alt } source={ post.frontmatter.logos } />
 									</div>
 								))}
 							</div>
