@@ -68,5 +68,17 @@ logos3: |-
   ![5](/img/5b.jpg)
 
   ![6](/img/6b.jpg)
+logos4: |-
+  ![1](/img/1b.jpg)
+
+  ![2](/img/2b.jpg)
+
+  ![3](/img/3b.jpg)
+
+  ![4](/img/4b.jpg)
+
+  ![5](/img/5b.jpg)
+
+  ![6](/img/6b.jpg)
 ---
 
