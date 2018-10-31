@@ -45,30 +45,18 @@ logos1: |-
 
   ![6](/img/6.jpg)
 logos2: |-
-  ![1](/img/1.jpg)
+  ![1](/img/1a.jpg)
 
-  ![2](/img/2.jpg)
+  ![2](/img/2a.jpg)
 
-  ![3](/img/3.jpg)
+  ![3](/img/3a.jpg)
 
-  ![4](/img/4.jpg)
+  ![4](/img/4a.jpg)
 
-  ![5](/img/5.jpg)
+  ![5](/img/5a.jpg)
 
-  ![6](/img/6.jpg)
+  ![6](/img/6a.jpg)
 logos3: |-
-  ![1](/img/1.jpg)
-
-  ![2](/img/2.jpg)
-
-  ![3](/img/3.jpg)
-
-  ![4](/img/4.jpg)
-
-  ![5](/img/5.jpg)
-
-  ![6](/img/6.jpg)
-logos4: |-
   ![1](/img/1.jpg)
 
   ![2](/img/2.jpg)
