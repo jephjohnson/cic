@@ -8,7 +8,6 @@ export default class IndexPage extends React.Component {
 	
 	renderParagraph(props) {
 		const { children } = props;
-	
 		if (children && children[0]
 			&& children.length === 1
 			&& children[0].props
@@ -16,7 +15,6 @@ export default class IndexPage extends React.Component {
 	
 			return <div className="column has-text-centered">{children}</div>;
 		}
-	
 		return <p>{children}</p>;
 	}
 
@@ -47,7 +45,7 @@ export default class IndexPage extends React.Component {
             </div>
           </section> 
         ))}
-        <section className="section is-paddingless">
+        <section className="section">
 				{posts.map(({ node: post }) => (
             <div key={post.id} className="container">
 								<div className="columns is-centered features">
@@ -100,10 +98,37 @@ export default class IndexPage extends React.Component {
 				<section className="section">
 					<div className="container">
 							<div className="columns is-centered">
-							<div className="column is-10-mobile is-10-tablet is-10-widescreen">
+								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
 									<div className="columns is-centered logos">
 										{posts.map(({ node: post }) => (
-												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos.alt } source={ post.frontmatter.logos } />
+												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos1.alt } source={ post.frontmatter.logos1 } />
+										))}
+									</div>
+								</div>
+							</div>
+							<div className="columns is-centered">
+								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
+									<div className="columns is-centered logos">
+										{posts.map(({ node: post }) => (
+												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos2.alt } source={ post.frontmatter.logos2 } />
+										))}
+									</div>
+								</div>
+							</div>
+							<div className="columns is-centered">
+								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
+									<div className="columns is-centered logos">
+										{posts.map(({ node: post }) => (
+												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos3.alt } source={ post.frontmatter.logos3 } />
+										))}
+									</div>
+								</div>
+							</div>
+							<div className="columns is-centered">
+								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
+									<div className="columns is-centered logos">
+										{posts.map(({ node: post }) => (
+												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos4.alt } source={ post.frontmatter.logos4 } />
 										))}
 									</div>
 								</div>
@@ -139,7 +164,10 @@ export const pageQuery = graphql`
           frontmatter {
             heading
 						description
-						logos
+						logos1
+						logos2
+						logos3
+						logos4
             full_image
             templateKey
             date(formatString: "MMMM DD, YYYY")
