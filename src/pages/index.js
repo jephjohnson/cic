@@ -52,7 +52,7 @@ export default class IndexPage extends React.Component {
             <div key={post.id} className="container">
 								<div className="columns is-centered features">
 										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})` }}>
+												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})`,  backgroundColor: post.frontmatter.main.image1.color }}>
 													<div className="column is-5-desktop is-offset-6 features--text has-text-centered">
 														<h5>{post.frontmatter.main.image1.title}</h5>
 														<h6>{post.frontmatter.main.image1.subtitle}</h6>
@@ -63,7 +63,7 @@ export default class IndexPage extends React.Component {
 								</div>
 								<div className="columns is-centered features">
 										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner pos-right" style={{ backgroundImage: `url(${post.frontmatter.main.image2.image})` }}>
+												<div className="columns features--inner pos-right" style={{ backgroundImage: `url(${post.frontmatter.main.image2.image})`, backgroundColor: post.frontmatter.main.image2.color }}>
 													<div className="column is-5-tablet is-5-desktop features--text has-text-centered">
 														<h5>{post.frontmatter.main.image2.title}</h5>
 														<h6>{post.frontmatter.main.image2.subtitle}</h6>
@@ -74,7 +74,7 @@ export default class IndexPage extends React.Component {
 								</div>
 								<div className="columns is-centered features">
 										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image3.image})` }}>
+												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image3.image})`, backgroundColor: post.frontmatter.main.image3.color }}>
 													<div className="column is-5-desktop is-offset-6 features--text has-text-centered">
 														<h5>{post.frontmatter.main.image3.title}</h5>
 														<h6>{post.frontmatter.main.image3.subtitle}</h6>
@@ -85,7 +85,7 @@ export default class IndexPage extends React.Component {
 								</div>	
 								<div className="columns is-centered features">
 										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner pos-right red" style={{ backgroundImage: `url(${post.frontmatter.main.image4.image})` }}>
+												<div className="columns features--inner pos-right" style={{ backgroundImage: `url(${post.frontmatter.main.image4.image})`, backgroundColor: post.frontmatter.main.image4.color }}>
 													<div className="column is-5-tablet is-5-desktop features--text has-text-centered">
 														<h5>{post.frontmatter.main.image4.title}</h5>
 														<h6>{post.frontmatter.main.image4.subtitle}</h6>
@@ -175,6 +175,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             main {
 							image1 {
+								color
 								image
 								alt
 								title
@@ -182,6 +183,7 @@ export const pageQuery = graphql`
 								description
 							}
 							image2 {
+								color
 								image
 								alt
 								title
@@ -189,6 +191,7 @@ export const pageQuery = graphql`
 								description
 							}
 							image3 {
+								color
 								image
 								alt
 								title
@@ -196,6 +199,7 @@ export const pageQuery = graphql`
 								description
 							}
 							image4 {
+								color
 								image
 								alt
 								title
