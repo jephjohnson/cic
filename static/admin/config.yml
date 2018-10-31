@@ -91,4 +91,4 @@ collections:
           - {label: Logos1, name: logos1, widget: markdown}
           - {label: Logos2, name: logos2, widget: markdown}
           - {label: Logos3, name: logos3, widget: markdown}
-          - {label: Logos4, name: logos3, widget: markdown}
+          - {label: Logos4, name: logos4, widget: markdown}
