@@ -101,7 +101,7 @@ export default class IndexPage extends React.Component {
 					<div className="container">
 							<div className="columns is-centered">
 								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-centered logos">
+									<div className="columns is-multiline is-mobile is-centered logos">
 										{posts.map(({ node: post }) => (
 												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos1.alt } source={ post.frontmatter.logos1 } />
 										))}
@@ -110,7 +110,7 @@ export default class IndexPage extends React.Component {
 							</div>
 							<div className="columns is-centered">
 								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-centered logos">
+									<div className="columns is-multiline is-mobile is-centered logos">
 										{posts.map(({ node: post }) => (
 												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos2.alt } source={ post.frontmatter.logos2 } />
 										))}
@@ -119,7 +119,7 @@ export default class IndexPage extends React.Component {
 							</div>
 							<div className="columns is-centered">
 								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-centered logos">
+									<div className="columns is-multiline is-mobile is-centered logos">
 										{posts.map(({ node: post }) => (
 												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos3.alt } source={ post.frontmatter.logos3 } />
 										))}
@@ -128,7 +128,7 @@ export default class IndexPage extends React.Component {
 							</div>
 							<div className="columns is-centered">
 								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-centered logos">
+									<div className="columns is-multiline is-mobile is-centered logos">
 										{posts.map(({ node: post }) => (
 												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos4.alt } source={ post.frontmatter.logos4 } />
 										))}

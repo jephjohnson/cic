@@ -3,12 +3,37 @@ import React from 'react'
 const AboutPageTemplate = () => {
   return (
     <footer className="footer">
-        <div className="content has-text-centered">
-            <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
+        <div className="columns is-centered">
+            <div className="column is-9-mobile is-11-tablet is-9-widescreen">
+                <div className="columns">
+                  <div className="column">
+                    <h5>Corporate Imaging Concepts, LLC</h5>
+                    <p>
+                      308 Wainwright Drive Northbrook IL 60062<br/>
+                      847 412 6600<br/>
+                      cicrequest@corp-imaging.com
+                    </p>
+                  </div>
+                  <div className="column">
+                    <div className="columns icons-wrapper">
+                      <div className="column is-3-widescreen has-text-centered">
+                        <h6>Careers</h6>
+                        <ul className="icons">
+                          <li className="fb"></li>
+                          <li className="linkedin"></li>
+                        </ul>
+                      </div>
+                      <div className="column is-3-widescreen has-text-centered">
+                        <h6>Your Privacy</h6>
+                        <ul className="icons">
+                          <li className="twitter"></li>
+                          <li className="instagram"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </footer>
   )
