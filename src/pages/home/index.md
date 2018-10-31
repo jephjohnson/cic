@@ -44,5 +44,17 @@ logos: |-
   ![5](/img/5.jpg)
 
   ![6](/img/6.jpg)
+
+  ![1a](/img/1a.jpg)
+
+  ![2a](/img/2a.jpg)
+
+  ![3a](/img/3a.jpg)
+
+  ![4a](/img/4a.jpg)
+
+  ![5a](/img/5a.jpg)
+
+  ![6a](/img/6a.jpg)
 ---
 
