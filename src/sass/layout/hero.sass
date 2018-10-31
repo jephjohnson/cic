@@ -3,9 +3,8 @@ section.hero
     background-repeat: no-repeat
     
 .hero
-    // .hero-body
-    //     padding-bottom: 5rem
-    //     padding-top: 2rem
+    .hero-body
+        padding: 4rem 1.5rem
 
     //     +tablet
     //         padding-top: 5rem
@@ -14,8 +13,19 @@ section.hero
     //         padding-top: 7rem
 
 .arrow 
-    margin-top: auto
-    color: white
+    margin: auto
+    box-sizing: border-box
+    height: 2rem
+    max-width: 2rem
+    border-style: solid
+    border-color: $orange
+    border-width: 0px 1px 1px 0px
+    transform: rotate(45deg)
+    transition: border-width 150ms ease-in-out
+    display: block
+    
+    &-wrapper 
+        align-self: flex-end;
 
 .intro 
     min-height: 20rem

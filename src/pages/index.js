@@ -34,7 +34,9 @@ export default class IndexPage extends React.Component {
                             <div className="column">
                                 <ReactMarkdown className="title has-text-centered" source={ post.frontmatter.heading } />
                             </div>
-                            <div className="column is-2 arrow has-text-centered">Arrow</div> 
+                            <div className="column is-2 has-text-centered arrow-wrapper">
+															<span className="arrow"></span>
+														</div> 
                             <div className="column">
                                 <ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
                             </div>
