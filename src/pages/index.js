@@ -14,7 +14,7 @@ export default class IndexPage extends React.Component {
 			&& children[0].props
 			&& children[0].props.src) { // rendering media without p wrapper
 	
-			return <div className="column">{children}</div>;
+			return <div className="column has-text-centered">{children}</div>;
 		}
 	
 		return <p>{children}</p>;
@@ -100,9 +100,13 @@ export default class IndexPage extends React.Component {
 				<section className="section">
 					<div className="container">
 							<div className="columns is-centered">
-								{posts.map(({ node: post }) => (
-										<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos.alt } source={ post.frontmatter.logos } />
-								))}
+							<div className="column is-10-mobile is-10-tablet is-10-widescreen">
+									<div className="columns is-centered logos">
+										{posts.map(({ node: post }) => (
+												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos.alt } source={ post.frontmatter.logos } />
+										))}
+									</div>
+								</div>
 							</div>
 					</div>
 				</section>
