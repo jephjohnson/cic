@@ -33,10 +33,16 @@ main:
     subtitle: Earbuds in Case
     title: The Big Swings
 logos: |-
-  ![asdfasdfsfsfsf](/img/chemex.jpg)
+  ![1](/img/1.jpg)
 
-  ![dddddd](/img/coffee-gear.png)
+  ![2](/img/2.jpg)
 
-  logosssss
+  ![3](/img/3.jpg)
+
+  ![4](/img/4.jpg)
+
+  ![5](/img/5.jpg)
+
+  ![6](/img/6.jpg)
 ---
 
