@@ -24,7 +24,7 @@ main:
     title: Wear with Pride
   image3:
     alt: The Small Touches
-    color: '#f07951'
+    color: '#057dc1'
     description: "Make your brand \x03loud and clear."
     image: /img/features-3.png
     subtitle: Earbuds in Case
