@@ -13,7 +13,10 @@ main:
     color: '#057dc1'
     description: Shine a light on your event!
     image: /img/feature-1.jpg
-    subtitle: "LED Double-Wall \x03\n16oz Cola Glass"
+    subtitle: |-
+      LED Double-Wall
+
+      16oz Cola Glass
     title: Product of the Day
   image2:
     alt: Wear with Pride
