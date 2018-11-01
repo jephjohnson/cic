@@ -21,7 +21,10 @@ main:
   image2:
     alt: Wear with Pride
     color: '#057dc1'
-    description: "Let customers put \x03your brand on display."
+    description: |-
+      Let customers put 
+
+      your brand on display.
     image: /img/features-2.jpg
     subtitle: Nike Dri-Fit Polo
     title: Wear with Pride
