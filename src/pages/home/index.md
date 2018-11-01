@@ -15,7 +15,7 @@ main:
     image: /img/feature-1.jpg
     subtitle: |-
       LED Double-Wall
-      
+
       16oz Cola Glass
     title: Product of the Day
   image2:
@@ -31,14 +31,14 @@ main:
   image3:
     alt: The Small Touches
     color: '#057dc1'
-    description: "Make your brand \x03loud and clear."
+    description: "Make your brand\n\n\x03loud and clear."
     image: /img/features-3.jpg
     subtitle: Earbuds in Case
     title: The Small Touches
   image4:
     alt: The Big Swings
     color: '#f07951'
-    description: "Swing for the fences with \x03this promotional hard-hitter!"
+    description: "Swing for the fences with\n\n\x03this promotional hard-hitter!"
     image: /img/features-4.jpg
     subtitle: Earbuds in Case
     title: The Big Swings
