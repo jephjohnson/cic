@@ -1,42 +1,104 @@
 .features
     margin-top: 3rem
-    height: 10rem
+    background: red
+    align-items: center
 
-    &--text
-        padding: 3rem 0 2rem 3rem
+    &:first-child
+        margin-top: 0
 
-        h6, h5, p
-            color: white
-
-    &--outer
+    &--bg
+        height: 19rem
+        position: absolute  
         background-image: url(/img/features.jpg)
         background-repeat: no-repeat
-        background-size: contain
-        min-height: 9rem
+        background-size: cover
+
+        left: 0
+        margin-top: 2rem
+
+        +tablet
+            left: auto
+            height: 11rem
+            margin-top: auto
+
+    &--outer
         margin: 0 auto
 
     &--inner
-        position: absolute
-        min-height: 12rem
-        left: 0
-        right: 0
-        margin: -2rem auto auto
-        width: 75%
-        background-repeat: no-repeat
-        background-size: contain 
+        justify-content: center
+        overflow: hidden
+        position: relative
+        height: auto
 
         +tablet
-           width: 80%
-        
-        +desktop
-           width: 82%
-        
-        +widescreen
-           width: 65%
-
-        &.pos-right
-            background-position: right
-
-        
-
+            height: 13rem
     
+    .right
+        display: flex;
+        flex-direction: column;
+
+        +tablet
+            display: flex;
+            flex-direction: initial;
+    
+    &--left
+       background-size: cover
+       background-repeat: no-repeat
+       min-height: 13rem
+    
+    &--right
+        background: $blue
+        
+        color: white
+        height: 10rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        
+        +tablet
+            padding: 0 2.25rem 0 0
+            height: 13rem
+
+        h5, h6, p
+            position: relative
+            z-index: 1
+        
+        &.left
+            padding: 0 2rem
+            order: 3
+
+            +tablet
+                padding: 0 0 0 2.25rem
+                height: 13rem
+                order: initial
+
+    .arrow
+        &-left, &-right
+            width: 0
+            height: 0
+            border-bottom: 15rem solid #456b82
+            position: absolute
+            top: 3rem
+
+        &-left
+            transform: rotate(90deg)
+            border-left: 11rem solid transparent
+            right: 39%
+            left: 0
+
+            +tablet
+                top: -2rem
+                left: auto
+                transform: rotate(0deg)
+
+        &-right
+            transform: rotate(-90deg)
+            border-right: 11rem solid transparent
+            left: initial
+            right: 0
+
+            +tablet
+                top: -2rem
+                left: 39%
+                right: initial
+                transform: rotate(0deg)

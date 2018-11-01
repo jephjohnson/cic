@@ -12,28 +12,28 @@ main:
     alt: A close-up of a paper filter filled with ground coffee
     color: '#057dc1'
     description: Shine a light on your event!
-    image: /img/feature-1.png
+    image: /img/feature-1.jpg
     subtitle: "LED Double-Wall \x0316oz Cola Glass"
     title: Product of the Day
   image2:
     alt: Wear with Pride
     color: '#057dc1'
     description: "Let customers put \x03your brand on display."
-    image: /img/features-2.png
+    image: /img/features-2.jpg
     subtitle: Nike Dri-Fit Polo
     title: Wear with Pride
   image3:
     alt: The Small Touches
     color: '#057dc1'
     description: "Make your brand \x03loud and clear."
-    image: /img/features-3.png
+    image: /img/features-3.jpg
     subtitle: Earbuds in Case
     title: The Small Touches
   image4:
     alt: The Big Swings
     color: '#f07951'
     description: "Swing for the fences with \x03this promotional hard-hitter!"
-    image: /img/features-4.png
+    image: /img/features-4.jpg
     subtitle: Earbuds in Case
     title: The Big Swings
 logos1: |-

@@ -51,9 +51,12 @@ export default class IndexPage extends React.Component {
 				{posts.map(({ node: post }) => (
             <div key={post.id} className="container">
 								<div className="columns is-centered features">
-										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})`,  backgroundColor: post.frontmatter.main.image1.color }}>
-													<div className="column is-5-desktop is-offset-6 features--text has-text-centered">
+										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
+										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
+												<div className="columns features--inner">
+													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})`, backgroundColor: post.frontmatter.main.image1.color }}></div>
+													<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: post.frontmatter.main.image1.color }}></div>
+													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: post.frontmatter.main.image1.color }}>
 														<h5>{post.frontmatter.main.image1.title}</h5>
 														<h6>{post.frontmatter.main.image1.subtitle}</h6>
 														<ReactMarkdown source={ post.frontmatter.main.image1.description } />
@@ -62,35 +65,44 @@ export default class IndexPage extends React.Component {
 										</div>
 								</div>
 								<div className="columns is-centered features">
-										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner pos-right" style={{ backgroundImage: `url(${post.frontmatter.main.image2.image})`, backgroundColor: post.frontmatter.main.image2.color }}>
-													<div className="column is-5-tablet is-5-desktop features--text has-text-centered">
+										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
+										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
+												<div className="columns features--inner right">
+													<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: post.frontmatter.main.image2.color }}></div>
+													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: post.frontmatter.main.image2.color }}>
 														<h5>{post.frontmatter.main.image2.title}</h5>
 														<h6>{post.frontmatter.main.image2.subtitle}</h6>
 														<ReactMarkdown source={ post.frontmatter.main.image2.description } />
 													</div>
+													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image2.image})`, backgroundColor: post.frontmatter.main.image2.color }}></div>
 												</div>
 										</div>
 								</div>
 								<div className="columns is-centered features">
-										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner" style={{ backgroundImage: `url(${post.frontmatter.main.image3.image})`, backgroundColor: post.frontmatter.main.image3.color }}>
-													<div className="column is-5-desktop is-offset-6 features--text has-text-centered">
+										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
+										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
+												<div className="columns features--inner">
+													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image3.image})`, backgroundColor: post.frontmatter.main.image3.color }}></div>
+													<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: post.frontmatter.main.image3.color }}></div>
+													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: post.frontmatter.main.image3.color }}>
 														<h5>{post.frontmatter.main.image3.title}</h5>
 														<h6>{post.frontmatter.main.image3.subtitle}</h6>
 														<ReactMarkdown source={ post.frontmatter.main.image3.description } />
 													</div>
 												</div>
 										</div>
-								</div>	
+								</div>
 								<div className="columns is-centered features">
-										<div className="column is-10-mobile is-10-tablet is-8-widescreen features--outer is-paddingless">
-												<div className="columns features--inner pos-right" style={{ backgroundImage: `url(${post.frontmatter.main.image4.image})`, backgroundColor: post.frontmatter.main.image4.color }}>
-													<div className="column is-5-tablet is-5-desktop features--text has-text-centered">
+										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
+										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
+												<div className="columns features--inner right">
+													<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: post.frontmatter.main.image4.color }}></div>
+													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: post.frontmatter.main.image4.color }}>
 														<h5>{post.frontmatter.main.image4.title}</h5>
 														<h6>{post.frontmatter.main.image4.subtitle}</h6>
-														<ReactMarkdown source={ post.frontmatter.main.image4.description } />
+														<ReactMarkdown source={ post.frontmatter.main.image2.description } />
 													</div>
+													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image4.image})`, backgroundColor: post.frontmatter.main.image4.color }}></div>
 												</div>
 										</div>
 								</div>	
