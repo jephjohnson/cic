@@ -15,7 +15,7 @@ main:
     image: /img/feature-1.jpg
     subtitle: |-
       LED Double-Wall
-
+      
       16oz Cola Glass
     title: Product of the Day
   image2:

@@ -8,15 +8,22 @@ export default class IndexPage extends React.Component {
 	
 	renderParagraph(props) {
 		const { children } = props;
+		console.log(children[0].props)
 		if (children && children[0]
 			&& children.length === 1
 			&& children[0].props
-			&& children[0].props.src) { // rendering media without p wrapper
-	
+			&& children[0].props.src) { 
+
 			return <div className="column has-text-centered">{children}</div>;
 		}
+
+		if (children[0].props.children.value !== "") { 
+			return <h6>{children}</h6>;
+		}
+
 		return <p>{children}</p>;
 	}
+
 
 	render() {
     const { data } = this.props
@@ -58,7 +65,7 @@ export default class IndexPage extends React.Component {
 													<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: post.frontmatter.main.image1.color }}></div>
 													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: post.frontmatter.main.image1.color }}>
 														<h5>{post.frontmatter.main.image1.title}</h5>
-														<h6>{post.frontmatter.main.image1.subtitle}</h6>
+														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image1.subtitle } />
 														<ReactMarkdown source={ post.frontmatter.main.image1.description } />
 													</div>
 												</div>
@@ -71,7 +78,7 @@ export default class IndexPage extends React.Component {
 													<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: post.frontmatter.main.image2.color }}></div>
 													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: post.frontmatter.main.image2.color }}>
 														<h5>{post.frontmatter.main.image2.title}</h5>
-														<h6>{post.frontmatter.main.image2.subtitle}</h6>
+														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image2.subtitle } />
 														<ReactMarkdown source={ post.frontmatter.main.image2.description } />
 													</div>
 													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image2.image})`, backgroundColor: post.frontmatter.main.image2.color }}></div>
@@ -86,7 +93,7 @@ export default class IndexPage extends React.Component {
 													<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: post.frontmatter.main.image3.color }}></div>
 													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: post.frontmatter.main.image3.color }}>
 														<h5>{post.frontmatter.main.image3.title}</h5>
-														<h6>{post.frontmatter.main.image3.subtitle}</h6>
+														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image3.subtitle } />
 														<ReactMarkdown source={ post.frontmatter.main.image3.description } />
 													</div>
 												</div>
@@ -99,7 +106,7 @@ export default class IndexPage extends React.Component {
 													<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: post.frontmatter.main.image4.color }}></div>
 													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: post.frontmatter.main.image4.color }}>
 														<h5>{post.frontmatter.main.image4.title}</h5>
-														<h6>{post.frontmatter.main.image4.subtitle}</h6>
+														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image4.subtitle } />
 														<ReactMarkdown source={ post.frontmatter.main.image2.description } />
 													</div>
 													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image4.image})`, backgroundColor: post.frontmatter.main.image4.color }}></div>
