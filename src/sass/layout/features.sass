@@ -1,10 +1,28 @@
 .features
     margin-top: 3rem
-    //background: red
     align-items: center
 
     &:first-child
         margin-top: 0
+
+    &-btn
+        position: absolute
+        right: auto
+        left: 0
+        padding: 0.5rem 0 0.5rem 1rem
+        bottom: 0
+        color: white
+        text-transform: uppercase
+        font-size: 0.85rem
+        font-style: italic
+        z-index: 1
+
+        +tablet
+            left: auto
+            right: 0
+            padding: 0.5rem 1rem 0.5rem 0
+
+        
 
     &--bg
         height: 19rem
@@ -34,21 +52,21 @@
             height: 13rem
     
     .right
-        display: flex;
-        flex-direction: column;
+        display: flex
+        flex-direction: column
 
         +tablet
-            display: flex;
-            flex-direction: initial;
+            display: flex
+            flex-direction: initial
     
     &--left
        background-size: cover
        background-repeat: no-repeat
        min-height: 13rem
+       position: relative
     
     &--right
         background: $blue
-        
         color: white
         height: 10rem
         display: flex
@@ -77,10 +95,7 @@
         
             +tablet
                font-size: 1rem
-
-
-
-        
+    
         &.left
             padding: 0 2rem
             order: 3
@@ -97,6 +112,7 @@
             border-bottom: 15rem solid #456b82
             position: absolute
             top: 3rem
+            z-index: 1
 
         &-left
             transform: rotate(90deg)
@@ -120,3 +136,21 @@
                 left: 39%
                 right: initial
                 transform: rotate(0deg)
+
+        &-btn
+            border-bottom: 2.25rem solid #456b82
+            border-left: 3rem solid transparent
+            right: auto
+            bottom: -0.35rem
+            width: 0
+            height: 0
+            position: absolute
+            z-index: 1
+            transform: rotate(90deg)
+            left: 9.7rem
+        
+            +tablet
+                left: auto
+                right: 10rem
+                transform: rotate(0deg)
+                bottom: 0

@@ -9,17 +9,17 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({increaseCounter, de
 
 class Counter extends React.Component {
   
-  onDotClick () {   
-    this.props.increaseCounter();
+  onDotClick (index) {   
+    this.props.indexCounter(index);
   }
 
   render () {
     const { count } = this.props;
-    console.log(this.props)
+    //console.log(this.props)
     return (    
       <div>
         <p>Count: {count}</p>
-        <button onClick={this.onDotClick.bind(this)}>Increment</button>
+        <button onClick={this.onDotClick.bind(this, count)}>Increment</button>
       </div>
     )
   }

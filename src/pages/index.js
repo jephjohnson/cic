@@ -1,14 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout/'
 const ReactMarkdown = require('react-markdown')
 
 export default class IndexPage extends React.Component {
+
+	constructor(props) {
+		super(props);
+		this.handleSort = this.handleSort.bind(this);
+	}
+
+	handleSort(value) {
+		console.log(value);
+	}
 	
 	renderParagraph(props) {
 		const { children } = props;
-		console.log(children[0].props)
 		if (children && children[0]
 			&& children.length === 1
 			&& children[0].props
@@ -24,10 +32,67 @@ export default class IndexPage extends React.Component {
 		return <p>{children}</p>;
 	}
 
-
 	render() {
     const { data } = this.props
 		const { edges: posts } = data.allMarkdownRemark
+		const newpost = posts[0].node.frontmatter
+
+		const Logos = Array(4).fill("").map((a, p) =>
+			<div key={ p } className="columns is-centered">
+				<div className="column is-12-mobile is-10-tablet is-10-widescreen">
+					<div className="columns is-multiline is-mobile is-centered logos">
+						<ReactMarkdown key={p.id} renderers={{ paragraph: this.renderParagraph }} alt={ newpost["logos" + (p + 1)].alt } source={ newpost["logos" + (p + 1)] } />
+					</div>
+				</div>
+		</div>
+		);
+		
+		const Features = Array(4).fill("").map((a, p) => {
+			return ( 
+				<div key={ p } className="columns is-centered features">
+						<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
+						<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
+							{ p === 0 || p === 2 ? (
+									<div className="columns features--inner">
+										<div className="column is-desktop-1 close left" onClick={ () => this.handleSort(p) }></div>  
+										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image })`, backgroundColor: newpost.main["image" + (p + 1)].color }}></div>
+										<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
+										<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}>
+											<h5>{ newpost.main["image" + (p + 1)].title }</h5>
+											<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ newpost.main["image" + (p + 1)].subtitle } />
+											<ReactMarkdown source={ newpost.main["image" + (p + 1)].description } />
+										</div>
+									</div>
+								) : p === 3 ? (
+										<div className="columns features--inner right">
+											<div className="column is-desktop-1 close right" onClick={ () => this.handleSort(p) }></div>  
+											<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
+											<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}>
+												<h5>{ newpost.main["image" + (p + 1)].title }</h5>
+												<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ newpost.main["image" + (p + 1)].subtitle } />
+												<ReactMarkdown source={ newpost.main["image" + (p + 1)].description } />
+											</div>
+											<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image })`, backgroundColor: newpost.main["image" + (p + 1)].color }}>
+												<div className="arrow-btn" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
+												<div className="features-btn" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}><p>New & Noteworthy</p></div>
+											</div>
+									</div>
+								) : (
+									<div className="columns features--inner right">
+										<div className="column is-desktop-1 close right" onClick={ () => this.handleSort(p) }></div>  
+										<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
+										<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}>
+											<h5>{ newpost.main["image" + (p + 1)].title }</h5>
+											<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ newpost.main["image" + (p + 1)].subtitle } />
+											<ReactMarkdown source={ newpost.main["image" + (p + 1)].description } />
+										</div>
+										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image })`, backgroundColor: newpost.main["image" + (p + 1)].color }}></div>
+									</div>
+								)}
+						</div>
+				</div>
+			)
+		});
 
     return (
       <Layout>
@@ -55,105 +120,13 @@ export default class IndexPage extends React.Component {
           </section> 
         ))}
         <section className="section">
-				{posts.map(({ node: post }) => (
-            <div key={post.id} className="container">
-								<div className="columns is-centered features">
-										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
-										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
-												<div className="columns features--inner">
-													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image1.image})`, backgroundColor: post.frontmatter.main.image1.color }}></div>
-													<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: post.frontmatter.main.image1.color }}></div>
-													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: post.frontmatter.main.image1.color }}>
-														<h5>{post.frontmatter.main.image1.title}</h5>
-														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image1.subtitle } />
-														<ReactMarkdown source={ post.frontmatter.main.image1.description } />
-													</div>
-												</div>
-										</div>
-								</div>
-								<div className="columns is-centered features">
-										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
-										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
-												<div className="columns features--inner right">
-													<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: post.frontmatter.main.image2.color }}></div>
-													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: post.frontmatter.main.image2.color }}>
-														<h5>{post.frontmatter.main.image2.title}</h5>
-														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image2.subtitle } />
-														<ReactMarkdown source={ post.frontmatter.main.image2.description } />
-													</div>
-													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image2.image})`, backgroundColor: post.frontmatter.main.image2.color }}></div>
-												</div>
-										</div>
-								</div>
-								<div className="columns is-centered features">
-										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
-										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
-												<div className="columns features--inner">
-													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image3.image})`, backgroundColor: post.frontmatter.main.image3.color }}></div>
-													<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: post.frontmatter.main.image3.color }}></div>
-													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: post.frontmatter.main.image3.color }}>
-														<h5>{post.frontmatter.main.image3.title}</h5>
-														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image3.subtitle } />
-														<ReactMarkdown source={ post.frontmatter.main.image3.description } />
-													</div>
-												</div>
-										</div>
-								</div>
-								<div className="columns is-centered features">
-										<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
-										<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
-												<div className="columns features--inner right">
-													<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: post.frontmatter.main.image4.color }}></div>
-													<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: post.frontmatter.main.image4.color }}>
-														<h5>{post.frontmatter.main.image4.title}</h5>
-														<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ post.frontmatter.main.image4.subtitle } />
-														<ReactMarkdown source={ post.frontmatter.main.image2.description } />
-													</div>
-													<div className="column is-6-desktop features--left" style={{ backgroundImage: `url(${post.frontmatter.main.image4.image})`, backgroundColor: post.frontmatter.main.image4.color }}></div>
-												</div>
-										</div>
-								</div>	
-            </div>
-						))}
+					<div className="container">
+						{ Features }
+					</div>
         </section>
 				<section className="section">
 					<div className="container">
-							<div className="columns is-centered">
-								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-multiline is-mobile is-centered logos">
-										{posts.map(({ node: post }) => (
-												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos1.alt } source={ post.frontmatter.logos1 } />
-										))}
-									</div>
-								</div>
-							</div>
-							<div className="columns is-centered">
-								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-multiline is-mobile is-centered logos">
-										{posts.map(({ node: post }) => (
-												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos2.alt } source={ post.frontmatter.logos2 } />
-										))}
-									</div>
-								</div>
-							</div>
-							<div className="columns is-centered">
-								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-multiline is-mobile is-centered logos">
-										{posts.map(({ node: post }) => (
-												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos3.alt } source={ post.frontmatter.logos3 } />
-										))}
-									</div>
-								</div>
-							</div>
-							<div className="columns is-centered">
-								<div className="column is-12-mobile is-10-tablet is-10-widescreen">
-									<div className="columns is-multiline is-mobile is-centered logos">
-										{posts.map(({ node: post }) => (
-												<ReactMarkdown key={post.id} renderers={{ paragraph: this.renderParagraph }} alt={ post.frontmatter.logos4.alt } source={ post.frontmatter.logos4 } />
-										))}
-									</div>
-								</div>
-							</div>
+						{ Logos }
 					</div>
 				</section>
       </Layout>

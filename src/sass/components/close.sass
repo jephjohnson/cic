@@ -1,0 +1,82 @@
+.close
+    position: absolute
+    display: inline-block
+    width: 50px
+    height: 50px
+    overflow: hidden
+    top: 0.75rem
+    z-index: 1
+
+
+    &.left 
+        left: 0.75rem
+
+        +desktop
+            left: 5.5rem
+
+        &::before, &::after 
+            background: $blue
+
+    &.right
+        right: 0.75rem
+
+        +desktop
+            right: 5.5rem
+        
+        &::before, &::after 
+            background: $orange
+
+    &::before, &::after 
+        content: ''
+        position: absolute
+        height: 8px
+        width: 100%
+        top: 50%
+        left: 0
+        margin-top: -1px
+
+    &::before 
+        transform: rotate(90deg)
+
+    &::after 
+        transform: rotate(0deg)
+
+.features
+    &:nth-child(2)
+        .close
+            left: 0.75rem
+            right: auto
+
+            +tablet
+                right: 0.75rem
+                left: auto
+
+            +desktop
+                right: 5.5rem
+
+            &::before, &::after 
+                background: $blue
+
+    &:nth-child(3)
+        .close
+            right: 0.75rem
+            left: auto
+
+            +tablet
+                left: 0.75rem
+                right: auto
+
+            +desktop
+                left: 5.5rem
+
+    &:nth-child(4)
+        .close
+            left: 0.75rem
+            right: auto
+
+            +tablet
+                right: 0.75rem
+                left: auto
+
+            +desktop
+                right: 5.5rem
