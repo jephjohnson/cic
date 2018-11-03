@@ -3,7 +3,7 @@ import React from 'react'
 const AboutPageTemplate = () => {
   return (
     <footer className="footer">
-        <div className="columns is-centered">
+        <div className="columns is-centered footer-content">
             <div className="column is-9-mobile is-11-tablet is-9-widescreen">
                 <div className="columns">
                   <div className="column">

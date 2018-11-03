@@ -1,13 +1,12 @@
-section.hero 
+.hero 
     background-size: cover;
     background-repeat: no-repeat
     
-.hero
-    .hero-body
+    &-body
         padding: 4rem 1.5rem
-
-    //     +tablet
-    //         padding-top: 5rem
+        
+    &-copy
+        position: relative
 
 .arrow 
     margin: auto
@@ -18,7 +17,6 @@ section.hero
     border-color: $orange
     border-width: 0px 2px 2px 0px
     transform: rotate(45deg)
-    //transition: border-width 150ms ease-in-out
     display: block
 
     &-wrapper 
