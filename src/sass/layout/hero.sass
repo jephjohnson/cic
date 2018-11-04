@@ -1,12 +1,22 @@
 .hero 
     background-size: cover;
     background-repeat: no-repeat
+
+    .subtitle
+        display: none
+    
+        +tablet 
+            display: block
+
+        strong
+            color: $orange
     
     &-body
         padding: 4rem 1.5rem
 
     &-copy
         position: relative
+        margin: 0 auto
 
 .arrow 
     margin: auto
@@ -28,11 +38,15 @@
     h1, h3 
         color: white
 
-.subtitle
-    display: none
-    
-    +tablet 
-        display: block
+#hero-mobile
+    display: block
+    margin-bottom: 2rem
 
-    strong
-        color: $orange
+    +tablet 
+        display: none
+
+    .subtitle
+        color: $blue
+
+        strong
+            color: $orange

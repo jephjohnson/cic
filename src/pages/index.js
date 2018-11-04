@@ -49,7 +49,7 @@ export default class IndexPage extends React.Component {
 		
 		const Features = Array(4).fill("").map((a, p) => {
 			return ( 
-				<div key={ p } className="columns is-centered features">
+					<div key={ p } className="columns is-centered features">
 						<div className="column is-12-mobile is-10-tablet is-9-desktop is-8-widescreen features--bg"></div>
 						<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
 							{ p === 0 || p === 2 ? (
@@ -109,10 +109,10 @@ export default class IndexPage extends React.Component {
                             <div className="column is-2 has-text-centered arrow-wrapper">
 															<span className="arrow"></span>
 														</div> 
-                            <div className="column hero-copy">
-															<div className="speech-bubble"><p>Let's Talk</p></div>
-                              <ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
-                            </div>
+															<div className="column hero-copy">
+																<div className="speech-bubble"><p>Let's Talk</p></div>
+																<ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
+															</div>
                         </div>
                         </div>
                     </div>
@@ -122,6 +122,13 @@ export default class IndexPage extends React.Component {
         ))}
         <section className="section">
 					<div className="container">
+					{posts.map(({ node: post }) => (
+							<div key={post.id} className="columns is-centered" id="hero-mobile">
+								<div className="column is-10-mobile has-text-centered hero-copy">
+									<ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
+								</div>
+							</div>
+        		))}
 						{ Features }
 					</div>
         </section>
