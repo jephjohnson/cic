@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/'
+import Modal from '../components/modal/'
 const ReactMarkdown = require('react-markdown')
 
 export default class IndexPage extends React.Component {
@@ -9,10 +10,21 @@ export default class IndexPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleSort = this.handleSort.bind(this);
+		this.state = {
+			childVisible: false,
+			selectedIndex: ''
+    }
 	}
 
 	handleSort(value) {
-		console.log(value);
+		this.setState(prevState => ({ childVisible: !prevState.childVisible, selectedIndex: value + 1 }));
+		console.log(this.state.childVisible)
+	}
+
+	handleToUpdate = () => {
+		this.setState({
+      childVisible: false
+    });
 	}
 	
 	renderParagraph(props) {
@@ -54,7 +66,7 @@ export default class IndexPage extends React.Component {
 						<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
 							{ p === 0 || p === 2 ? (
 									<div className="columns features--inner">
-										<div className="column is-desktop-1 close left" onClick={ () => this.handleSort(p) }></div>  
+										<div className="column cross left" onClick={ () => this.handleSort(p) }></div>  
 										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image })`, backgroundColor: newpost.main["image" + (p + 1)].color }}></div>
 										<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
 										<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}>
@@ -64,8 +76,8 @@ export default class IndexPage extends React.Component {
 										</div>
 									</div>
 								) : p === 3 ? (
-										<div className="columns features--inner right">
-											<div className="column is-desktop-1 close right" onClick={ () => this.handleSort(p) }></div>  
+									<div className="columns features--inner right">
+											<div className="column cross right" onClick={ () => this.handleSort(p) }></div>  
 											<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
 											<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}>
 												<h5>{ newpost.main["image" + (p + 1)].title }</h5>
@@ -79,7 +91,7 @@ export default class IndexPage extends React.Component {
 									</div>
 								) : (
 									<div className="columns features--inner right">
-										<div className="column is-desktop-1 close right" onClick={ () => this.handleSort(p) }></div>  
+										<div className="column cross right" onClick={ () => this.handleSort(p) }></div>  
 										<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
 										<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}>
 											<h5>{ newpost.main["image" + (p + 1)].title }</h5>
@@ -96,6 +108,10 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+					{ posts.map(({ node: post }) => (
+							this.state.childVisible ? <Modal key={ post.id } data={ post.frontmatter.main[`image${this.state.selectedIndex}`] } handleToUpdate = {this.handleToUpdate} /> : null
+					))
+        }
         {posts.map(({ node: post }) => (
           <section className="hero" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image})` }}>
             <div className="container">
@@ -122,14 +138,14 @@ export default class IndexPage extends React.Component {
         ))}
         <section className="section">
 					<div className="container">
-					{posts.map(({ node: post }) => (
-							<div key={post.id} className="columns is-centered" id="hero-mobile">
-								<div className="column is-10-mobile has-text-centered hero-copy">
-									<ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
+						{posts.map(({ node: post }) => (
+								<div key={post.id} className="columns is-centered" id="hero-mobile">
+									<div className="column is-10-mobile has-text-centered hero-copy">
+										<ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
+									</div>
 								</div>
-							</div>
-        		))}
-						{ Features }
+							))}
+							{ Features }
 					</div>
         </section>
 				<section className="section">

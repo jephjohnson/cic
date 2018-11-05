@@ -21,6 +21,11 @@
             left: auto
             right: 0
             padding: 0.5rem 1rem 0.5rem 0
+        
+        &.modal-btn
+            left: 0
+            right: auto
+            padding: 0.5rem 0 0.5rem 1rem
 
         
 
@@ -105,52 +110,67 @@
                 height: 13rem
                 order: initial
 
-    .arrow
-        &-left, &-right
-            width: 0
-            height: 0
-            border-bottom: 15rem solid #456b82
-            position: absolute
-            top: 3rem
-            z-index: 1
+.arrow
+    &-left, &-right
+        width: 0
+        height: 0
+        border-bottom: 15rem solid #456b82
+        position: absolute
+        top: 3rem
+        z-index: 1
 
-        &-left
-            transform: rotate(90deg)
-            border-left: 11rem solid transparent
-            right: 39%
-            left: 0
+    &-left
+        transform: rotate(90deg)
+        border-left: 11rem solid transparent
+        right: 39%
+        left: 0
 
-            +tablet
-                top: -2rem
-                left: auto
-                transform: rotate(0deg)
+        +tablet
+            top: -2rem
+            left: auto
+            transform: rotate(0deg)
 
-        &-right
-            transform: rotate(-90deg)
-            border-right: 11rem solid transparent
-            left: initial
+    &-right
+        transform: rotate(-90deg)
+        border-right: 11rem solid transparent
+        left: initial
+        right: 0
+
+        +tablet
+            top: -2rem
+            left: 39%
+            right: initial
+            transform: rotate(0deg)
+
+        &.right-modal-arrow
+            top: 8rem
+            right: 13.5%
+            left: auto
+            transform: rotate(270deg)
+            border-right: 8rem solid transparent
+            border-bottom: 10rem solid #456b82
+
+    &-btn
+        border-bottom: 2.25rem solid #456b82
+        border-left: 3rem solid transparent
+        right: auto
+        bottom: -0.35rem
+        width: 0
+        height: 0
+        position: absolute
+        z-index: 1
+        transform: rotate(90deg)
+        left: 9.7rem
+    
+        +tablet
+            left: auto
+            right: 10rem
+            transform: rotate(0deg)
+            bottom: 0
+
+        &.modal-arrow
+            left: 9.65rem
             right: 0
-
-            +tablet
-                top: -2rem
-                left: 39%
-                right: initial
-                transform: rotate(0deg)
-
-        &-btn
-            border-bottom: 2.25rem solid #456b82
-            border-left: 3rem solid transparent
-            right: auto
             bottom: -0.35rem
-            width: 0
-            height: 0
-            position: absolute
-            z-index: 1
             transform: rotate(90deg)
-            left: 9.7rem
-        
-            +tablet
-                left: auto
-                right: 10rem
-                transform: rotate(0deg)
-                bottom: 0
+            

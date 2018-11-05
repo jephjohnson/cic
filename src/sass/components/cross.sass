@@ -1,4 +1,4 @@
-.close
+.cross
     position: absolute
     display: inline-block
     width: 50px
@@ -26,6 +26,13 @@
         &::before, &::after 
             background: $orange
 
+        &.modal-cross
+            right: 7.5rem
+            transform: rotate(45deg) scale(0.75)
+
+            &::before, &::after
+                background: white
+
     &::before, &::after 
         content: ''
         position: absolute
@@ -43,7 +50,7 @@
 
 .features
     &:nth-child(3)
-        .close
+        .cross
             left: 0.75rem
             right: auto
 
@@ -58,7 +65,7 @@
                 background: $blue
 
     &:nth-child(4)
-        .close
+        .cross
             right: 0.75rem
             left: auto
 
@@ -70,7 +77,7 @@
                 left: 5.5rem
 
     &:nth-child(5)
-        .close
+        .cross
             left: 0.75rem
             right: auto
 
