@@ -1,18 +1,21 @@
 .speech-bubble
-    position: absolute
+    position: fixed
     background: $green
     border-radius: 2rem
     padding: 0.5rem
     width: 7rem
     margin: 0 auto
     text-align: center
-    bottom: -4rem
-    right: 2rem
+    // bottom: -4rem
+    // right: 2rem
+    bottom: 35%
+    right: 2%
+    z-index: 2
     cursor: pointer
 
     +tablet
-        bottom: 0
-        right: 0    
+        // bottom: 0
+        // right: 0    
         
     &::after
         content: ''

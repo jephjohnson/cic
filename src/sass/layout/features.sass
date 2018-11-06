@@ -69,6 +69,9 @@
        background-repeat: no-repeat
        min-height: 13rem
        position: relative
+
+       &-modal
+           min-height: 22rem
     
     &--right
         background: $blue
@@ -143,12 +146,20 @@
             transform: rotate(0deg)
 
         &.right-modal-arrow
-            top: 8rem
-            right: 13.5%
+            top: auto
             left: auto
             transform: rotate(270deg)
             border-right: 8rem solid transparent
             border-bottom: 10rem solid #456b82
+            bottom: 7rem;
+            right: 3%;
+
+            +tablet
+                right: 6.8%
+                bottom: 10rem
+
+            +desktop
+                right: 13.5%
 
     &-btn
         border-bottom: 2.25rem solid #456b82

@@ -193,6 +193,7 @@ export const pageQuery = graphql`
 							image1 {
 								color
 								image
+								large_image
 								alt
 								title
 								subtitle
@@ -201,6 +202,7 @@ export const pageQuery = graphql`
 							image2 {
 								color
 								image
+								large_image
 								alt
 								title
 								subtitle
@@ -209,6 +211,7 @@ export const pageQuery = graphql`
 							image3 {
 								color
 								image
+								large_image
 								alt
 								title
 								subtitle
@@ -217,6 +220,7 @@ export const pageQuery = graphql`
 							image4 {
 								color
 								image
+								large_image
 								alt
 								title
 								subtitle

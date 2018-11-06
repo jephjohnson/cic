@@ -12,6 +12,7 @@ main:
     alt: A close-up of a paper filter filled with ground coffee
     color: '#057dc1'
     description: Shine a light on your event!
+    large_image: /img/large_image.jpg
     image: /img/feature-1.jpg
     subtitle: |-
       LED Double-Wall
@@ -25,6 +26,7 @@ main:
       Let customers put 
 
       your brand on display.
+    large_image: /img/large_image.jpg
     image: /img/features-2.jpg
     subtitle: Nike Dri-Fit Polo
     title: Wear with Pride
@@ -32,6 +34,7 @@ main:
     alt: The Small Touches
     color: '#057dc1'
     description: "Make your brand\n\n\x03loud and clear."
+    large_image: /img/large_image.jpg
     image: /img/features-3.jpg
     subtitle: Earbuds in Case
     title: The Small Touches
@@ -39,6 +42,7 @@ main:
     alt: The Big Swings
     color: '#f07951'
     description: "Swing for the fences with\n\n\x03this promotional hard-hitter!"
+    large_image: /img/large_image.jpg
     image: /img/features-4.jpg
     subtitle: Earbuds in Case
     title: The Big Swings
