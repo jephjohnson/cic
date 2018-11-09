@@ -27,9 +27,15 @@
             background: $orange
 
         &.modal-cross
-            right: 7.5rem
+            right: 0.5rem
             transform: rotate(45deg) scale(0.75)
 
+            +tablet
+                right: 2.5rem
+
+            +desktop
+                right: 7.5rem
+            
             &::before, &::after
                 background: white
 

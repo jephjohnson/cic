@@ -14,7 +14,7 @@ class Modal extends React.Component {
                   <div className="columns is-centered">
                     <div className="column cross right modal-cross" onClick={() => handleToUpdate()} ></div>  
                     <div className="column is-1-desktop arrow-right right-modal-arrow" style={{ borderBottomColor: data.color }}></div>
-                    <div className="column is-12-mobile is-12-tablet is-11-desktop features--left features--left-modal" style={{ backgroundImage: `url( ${ data.large_image })`, backgroundColor: data.color }}>
+                    <div className="column is-12-mobile is-12-tablet is-11-desktop features--left features--left-modal" style={{ backgroundImage: `url( ${ data.large_image })` }}>
                       <div className="arrow-btn modal-arrow" style={{ borderBottomColor: data.color }}></div>
                       <div className="features-btn modal-btn" style={{ backgroundColor: data.color }}><p>New & Noteworthy</p></div>
                     </div>
