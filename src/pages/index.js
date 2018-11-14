@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/'
 import Modal from '../components/modal/'
+import CN from 'classnames';
 const ReactMarkdown = require('react-markdown')
 
 export default class IndexPage extends React.Component {
@@ -18,7 +19,7 @@ export default class IndexPage extends React.Component {
 
 	handleSort(value) {
 		this.setState(prevState => ({ childVisible: !prevState.childVisible, selectedIndex: value + 1 }));
-		console.log(this.state.childVisible)
+		//console.log(this.state.childVisible)
 	}
 
 	handleToUpdate = () => {
@@ -108,8 +109,9 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-					{ posts.map(({ node: post }) => (
-							this.state.childVisible ? <Modal key={ post.id } data={ post.frontmatter.main[`image${this.state.selectedIndex}`] } handleToUpdate = {this.handleToUpdate} /> : null
+				<div className={CN('overlay', {'is-active': this.state.childVisible})}></div>
+				{ posts.map(({ node: post }) => (
+						this.state.childVisible ? <Modal key={ post.id } data={ post.frontmatter.main[`image${this.state.selectedIndex}`] } handleToUpdate = {this.handleToUpdate} /> : null
 					))
         }
         {posts.map(({ node: post }) => (
@@ -194,6 +196,9 @@ export const pageQuery = graphql`
 								color
 								image
 								large_image
+								large_image_client_title
+								large_image_client_description
+								large_image_team_members
 								alt
 								title
 								subtitle
@@ -203,6 +208,9 @@ export const pageQuery = graphql`
 								color
 								image
 								large_image
+								large_image_client_title
+								large_image_client_description
+								large_image_team_members
 								alt
 								title
 								subtitle
@@ -212,6 +220,9 @@ export const pageQuery = graphql`
 								color
 								image
 								large_image
+								large_image_client_title
+								large_image_client_description
+								large_image_team_members
 								alt
 								title
 								subtitle
@@ -221,6 +232,9 @@ export const pageQuery = graphql`
 								color
 								image
 								large_image
+								large_image_client_title
+								large_image_client_description
+								large_image_team_members
 								alt
 								title
 								subtitle

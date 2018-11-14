@@ -2,10 +2,28 @@ import React from 'react'
 const ReactMarkdown = require('react-markdown')
 
 class Modal extends React.Component {
+  
+  renderParagraph(props) {
+		const { children } = props;
+    
+    if (children && children[0]
+			&& children.length === 1
+			&& children[0].props
+			&& children[0].props.src) { 
+
+      return <p>{children}</p>;
+		}
+
+		if (children[0].props.children.value !== "") { 
+			return <h5>{children}</h5>;
+		}
+
+	}
+  
   render() {
       const { data } = this.props
       const handleToUpdate  = this.props.handleToUpdate;
-      console.log(data)
+      //console.log(data)
       return (
         <section className="section">
           <div className="container">
@@ -21,13 +39,10 @@ class Modal extends React.Component {
                   </div>
                   <div className="columns is-centered">
                     <div className="column is-12-mobile is-12-tablet is-11-desktop has-text-centered features--right" style={{ backgroundColor: data.color }}>
-                      {/* <h5>{ data.title }</h5> */}
-                      {/* <ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ data.subtitle } />
-                      <ReactMarkdown source={ data.description } /> */}
-                      <h5>Disney</h5>
-                      <p>Custom power banks kept fans electrified at the D23 Expo</p>
+                      <ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ data.large_image_client_title } />
+                      <ReactMarkdown source={ data.large_image_client_description } />
                       <h5>Project Team</h5>
-                      <p>Team Member, Team Member, Team Member</p>
+                      <ReactMarkdown source={ data.large_image_team_members } />
                     </div>
                   </div>
                 </div>

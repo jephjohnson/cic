@@ -13,6 +13,9 @@ main:
     color: '#057dc1'
     description: Shine a light on your event!
     large_image: /img/large_image.jpg
+    large_image_client_title: Disney
+    large_image_client_description: Custom power banks kept fans electrified at the D23 Expo
+    large_image_team_members: Team Member, Team Member, Team Member
     image: /img/feature-1.jpg
     subtitle: |-
       LED Double-Wall
@@ -27,6 +30,9 @@ main:
 
       your brand on display.
     large_image: /img/large_image.jpg
+    large_image_client_title: Disney
+    large_image_client_description: Custom power banks kept fans electrified at the D23 Expo
+    large_image_team_members: Team Member, Team Member, Team Member
     image: /img/features-2.jpg
     subtitle: Nike Dri-Fit Polo
     title: Wear with Pride
@@ -35,6 +41,9 @@ main:
     color: '#057dc1'
     description: "Make your brand\n\n\x03loud and clear."
     large_image: /img/large_image.jpg
+    large_image_client_title: Disney
+    large_image_client_description: Custom power banks kept fans electrified at the D23 Expo
+    large_image_team_members: Team Member, Team Member, Team Member
     image: /img/features-3.jpg
     subtitle: Earbuds in Case
     title: The Small Touches
@@ -43,6 +52,9 @@ main:
     color: '#f07951'
     description: "Swing for the fences with\n\n\x03this promotional hard-hitter!"
     large_image: /img/large_image.jpg
+    large_image_client_title: Disney
+    large_image_client_description: Custom power banks kept fans electrified at the D23 Expo
+    large_image_team_members: Team Member, Team Member, Team Member
     image: /img/features-4.jpg
     subtitle: Earbuds in Case
     title: The Big Swings

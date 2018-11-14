@@ -87,7 +87,48 @@ collections:
           - {label: Full_image, name: full_image, widget: image}
           - {label: Heading, name: heading, widget: markdown}
           - {label: Description, name: description, widget: markdown}
-          - {label: Main, name: main, widget: object, fields: [{label: Image1, name: image1, widget: object, fields: [{label: Color, name: color, widget: native-color}, {label: Image, name: image, widget: image}, {label: LargeImage, name: large_image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Subtitle, name: subtitle, widget: markdown}, {label: Description, name: description, widget: markdown}]}, {label: Image2, name: image2, widget: object, fields: [{label: Color, name: color, widget: native-color}, {label: LargeImage, name: large_image, widget: image}, {label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Subtitle, name: subtitle, widget: markdown}, {label: Description, name: description, widget: markdown}]}, {label: Image3, name: image3, widget: object, fields: [{label: Color, name: color, widget: native-color}, {label: LargeImage, name: large_image, widget: image}, {label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: SubTitle, name: subtitle, widget: markdown}, {label: Description, name: description, widget: markdown}]}, {label: Image4, name: image4, widget: object, fields: [{label: Color, name: color, widget: native-color}, {label: Image, name: image, widget: image}, {label: LargeImage, name: large_image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: SubTitle, name: subtitle, widget: markdown}, {label: Description, name: description, widget: markdown}]}]}
+          - {label: Main, name: main, widget: object, fields: 
+            [{label: Image1, name: image1, widget: object, fields: 
+              [{label: Color, name: color, widget: native-color}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: Subtitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 2, name: image2, widget: object, fields: [{label: Color, name: color, widget: native-color}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: Subtitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 3, name: image3, widget: object, fields: [{label: Color, name: color, widget: native-color}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: SubTitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 4, name: image4, widget: object, fields: [{label: Color, name: color, widget: native-color}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: SubTitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}]}
           - {label: Logos1, name: logos1, widget: markdown}
           - {label: Logos2, name: logos2, widget: markdown}
           - {label: Logos3, name: logos3, widget: markdown}
