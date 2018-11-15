@@ -37,7 +37,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/how/index.md"
+      - file: "src/pages/hows/index.md"
         label: "How Page"
         name: "hows"
         fields:
