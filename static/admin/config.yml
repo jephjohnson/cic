@@ -38,28 +38,28 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/how/index.md"
-        label: "How"
-        name: "how"
+        label: "How Page"
+        name: "hows"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "hows-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/ideas/index.md"
-        label: "Ideas"
+        label: "Ideas Page"
         name: "ideas"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ideas-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/careers/index.md"
-        label: "Careers"
+        label: "Careers Page"
         name: "careers"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/privacy/index.md"
-        label: "Privacy"
+        label: "Privacy Page"
         name: "privacy"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "privacy-page"}

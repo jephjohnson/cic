@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/'
-import HowPageTemplate from '../components/how/'
+import HowsPageTemplate from '../components/hows/'
 import { HTMLContent } from '../components/content/'
 
-const HowPage = ({ data }) => {
+const HowsPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <HowPageTemplate
+      <HowsPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -19,14 +19,14 @@ const HowPage = ({ data }) => {
   )
 }
 
-HowPage.propTypes = {
+HowsPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default HowPage
+export default HowsPage
 
-export const howPageQuery = graphql`
-  query HowPage($id: String!) {
+export const howsPageQuery = graphql`
+  query HowsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

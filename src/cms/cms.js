@@ -2,7 +2,7 @@ import CMS from 'netlify-cms'
 import * as NativeColorWidget from 'netlify-cms-widget-native-color'
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
-import HowPagePreview from './preview-templates/HowPagePreview'
+import HowsPagePreview from './preview-templates/HowsPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
@@ -19,7 +19,7 @@ CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('careers', CareersPagePreview)
 CMS.registerPreviewTemplate('ideas', IdeasPagePreview)
 CMS.registerPreviewTemplate('privacy', PrivacyPagePreview)
-CMS.registerPreviewTemplate('how', HowPagePreview)
+CMS.registerPreviewTemplate('hows', HowsPagePreview)
 CMS.registerPreviewTemplate('contact', ContactPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('how', HomePagePreview)

@@ -1,6 +1,6 @@
 ---
-templateKey: how-page
-title: About our values
+templateKey: hows-page
+title: Hows our values
 ---
 ### **Shade-grown coffee**
 

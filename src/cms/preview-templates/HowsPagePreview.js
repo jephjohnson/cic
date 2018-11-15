@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AboutPageTemplate from '../../components/how/'
+import HowsPageTemplate from '../../components/hows/'
 
-const AboutPagePreview = ({ entry, widgetFor }) => (
-  <AboutPageTemplate
+const HowsPagePreview = ({ entry, widgetFor }) => (
+  <HowsPageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
   />
 )
 
-AboutPagePreview.propTypes = {
+HowsPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default AboutPagePreview
+export default HowsPagePreview

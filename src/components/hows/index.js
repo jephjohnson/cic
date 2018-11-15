@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Content from '../content/'
 
-const HowPageTemplate = ({ title, content, contentComponent }) => {
+const HowsPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -23,10 +23,10 @@ const HowPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-HowPageTemplate.propTypes = {
+HowsPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-export default HowPageTemplate
+export default HowsPageTemplate
