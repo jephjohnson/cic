@@ -42,6 +42,9 @@ collections:
         name: "hows"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "hows-page"}
+          - {label: Full_image, name: full_image, widget: image}
+          - {label: Heading, name: heading, widget: markdown}
+          - {label: Description, name: description, widget: markdown}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/ideas/index.md"

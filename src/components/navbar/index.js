@@ -8,6 +8,7 @@ import * as toggleactionCreators from '../../actions/toggleActions';
 
 import logo from '../../img/logo.png'
 
+
 const mapStateToProps = (state) => ({ hidden: state.toggle.hidden });
 const mapDispatchToProps = (dispatch) => bindActionCreators({...toggleactionCreators}, dispatch)
 
@@ -23,7 +24,7 @@ class Navbar extends React.Component {
 
     const navLinks = [
       {route: '/', text: 'What'},
-      {route: '/how', text: 'How'},
+      {route: '/hows', text: 'How'},
       {route: '/products', text: 'Profile'},
       {route: '/contact', text: 'Contact'},
       
