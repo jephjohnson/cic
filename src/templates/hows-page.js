@@ -11,12 +11,11 @@ const { markdownRemark: post } = data
   return (
     <Layout>
       <HowsPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        full_image={post.frontmatter.full_image}
-        heading={post.frontmatter.heading}
-        description={post.frontmatter.description}
-        // content={post.html}
+        contentComponent={ HTMLContent }
+        title={ post.frontmatter.title }
+        full_image={ post.frontmatter.full_image }
+        heading={ post.frontmatter.heading }
+        main={ post.frontmatter.main }
       />
     </Layout>
   )
@@ -35,7 +34,29 @@ export const howsPageQuery = graphql`
         title
         full_image
         heading
-        description
+        main {
+          image1 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+          image2 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+          image3 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+        }
       }
     }
   }

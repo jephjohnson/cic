@@ -1,30 +1,38 @@
 ---
 templateKey: hows-page
-title: Hows our values
 full_image: /img/hero.jpg
-heading: "# Leave the \x03expected to \n\n\n\n# \x03the robots."
+heading: "# Competitive pricing meets \x03the most personal service \x03in the industry."
 description: >-
   ### Any robot can put a logo on a t-shirt. We want to take things to the
   **next level** with something extraordinary. We want to be the **creative
   partner **that sparks love for your brand through **innovation** and
   **strategic trend spotting**.
+main:
+  image1:
+    alt: A close-up of a paper filter filled with ground coffee
+    image: /img/how-1.jpg
+    title: Creativity.
+    subtitle: |-
+      Take Promotions
+
+      to New Heights
+    description: Rather than simply take orders, our brand specialists focus on strategic trend spotting and work as your creative partner to build innovative promotional campaigns that elevate your brand.
+  image2:
+    alt: A close-up of a paper filter filled with ground coffee
+    image: /img/how-2.jpg
+    title: Purchasing Power.
+    subtitle: |-
+      BIG SAVINGS FOR
+
+      EVEN SMALL ORDERS
+    description: With the purchasing power of a top-40 company, CIC can negotiate pricing on behalf of our entire client base – rather than each individual customer. Bottom line, our unparalleled purchasing clout translates to the lowest product costs available anywhere. In addition, we
+  image3:
+    alt: A close-up of a paper filter filled with ground coffee
+    image: /img/how-3.jpg
+    title: Creativity.
+    subtitle: |-
+      Take Promotions
+
+      to New Heights
+    description: Rather than simply take orders, our brand specialists focus on strategic trend spotting and work as your creative partner to build innovative promotional campaigns that elevate your brand.
 ---
-### **Shade-grown coffee**
-
-**Coffee** is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
-
-### Single origin
-
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
-
-### Sustainable farming
-
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.

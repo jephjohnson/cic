@@ -127,10 +127,10 @@ export default class IndexPage extends React.Component {
                             <div className="column is-2 has-text-centered arrow-wrapper">
 															<span className="arrow"></span>
 														</div> 
-															<div className="column hero-copy">
-																<div className="speech-bubble"><p>Let's Talk</p></div>
-																<ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
-															</div>
+														<div className="column hero-copy">
+															<ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
+														</div>
+														<div className="speech-bubble"><p>Let's Talk</p></div>
                         </div>
                         </div>
                     </div>

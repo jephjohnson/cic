@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-//import Content from '../content/'
-import box from '../../img/logo.png'
+//import box from '../../img/logo.png'
 const ReactMarkdown = require('react-markdown')
 
 
@@ -26,54 +25,59 @@ class HowsPageTemplate extends React.Component {
   }
   
   render() {
-    const { full_image, heading, description } = this.props;
+    const { full_image, heading, main } = this.props;
+    console.log(this.props.main)
     //const PageContent = contentComponent
 
-    const Modules = Array(4).fill("").map((a, p) =>
-    <div className="columns is-centered">
-      <div className="column is-10-tablet is-9-desktop">
-        <div className="box">
+
+    const Modules = Array(3).fill("").map((a, p) =>
+      <div key={ p } className="columns is-centered how-modules"> 
+        <div className="column is-10-tablet is-10-desktop">
+          <div className="box">
             <article className="media">
               <div className="media-left">
-                <figure className="image is-64x64">
-                    <img src={ box } alt="CIC logo" />
+                <figure className="image">
+                    <img src={ main["image" + (p + 1)].image } alt="CIC logo" />
                 </figure>
               </div>
               <div className="media-content">
                 <div className="content">
-                  <p>
-                    lklkjlkjlkj
-                  </p>
+                <h2>{ main["image" + (p + 1)].title }</h2>
+                <ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ main["image" + (p + 1)].subtitle } />
+                <ReactMarkdown source={ main["image" + (p + 1)].description } />
                 </div>
               </div>
             </article>
+          </div>
         </div>
       </div>
-    </div>
 		);
 
     return (
       <div>
       <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
          <div className="container">
-             <div className="hero-body">
-                 <div className="columns is-centered">
-                     <div className="column is-10-tablet is-9-desktop">
-                     <div className="columns intro">
-                         <div className="column">
-                             <ReactMarkdown className="title has-text-centered" source={ heading } />
-                         </div>
-                         <div className="column is-2 has-text-centered arrow-wrapper">
-                           <span className="arrow"></span>
-                         </div> 
-                           <div className="column hero-copy">
-                             <div className="speech-bubble"><p>Let's Talk</p></div>
-                               <ReactMarkdown className="subtitle has-text-centered" source={ description } />
-                           </div>
-                     </div>
-                     </div>
-                 </div>
-             </div>
+            <div className="hero-body">
+              <div className="columns is-centered">
+                  <div className="column is-10-tablet is-9-desktop">
+                    <div className="columns">
+                        <div className="column">
+                            <ReactMarkdown className="title has-text-centered" source={ heading } />
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div className="columns is-centered">
+                <div className="column is-10-tablet is-9-desktop">
+                  <div className="columns">
+                      <div className="column has-text-centered arrow-wrapper">
+                        <span className="arrow"></span>
+                      </div> 
+                      <div className="speech-bubble"><p>Let's Talk</p></div>
+                  </div>
+                </div>
+                </div>
+            </div>
          </div>
        </section>
        <section className="section">
@@ -88,11 +92,9 @@ class HowsPageTemplate extends React.Component {
 
 HowsPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  //content: PropTypes.string,
   full_image: PropTypes.string,
   heading: PropTypes.string,
-  description: PropTypes.string,
-  //contentComponent: PropTypes.func,
+  main: PropTypes.object,
 }
 
 export default HowsPageTemplate;
