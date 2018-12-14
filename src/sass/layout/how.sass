@@ -3,9 +3,16 @@ figure
     width: 100%
     max-width: 30rem
     height: auto
+    margin: 0 auto
 
 .media-left
-    margin-right: 4rem
+    margin: 0
+
+    +tablet 
+        margin-right: 0
+
+    +desktop 
+        margin-right: 4rem
 
 .content
     h2
@@ -23,7 +30,7 @@ figure
 .box
     box-shadow: none
     padding: 0
-    
+
     article
         align-items: center
 
@@ -35,4 +42,25 @@ figure
             
             .media-left
                 margin-right: 0
-                margin-left: 4rem;
+                margin-left: 0
+
+                +desktop 
+                    margin-left: 4rem
+                
+
+.media
+    display: block
+        
+    +desktop 
+        display: flex
+
+.media-content
+    width: 100%
+    margin: 2rem auto
+    text-align: center
+
+    +tablet
+        width: 75%
+
+    +desktop 
+        text-align: left
