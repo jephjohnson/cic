@@ -61,7 +61,7 @@ collections:
               fields: [{label: Image, name: image, widget: image}, 
               {label: Title, name: title, widget: markdown},
               {label: Subtitle, name: subtitle, widget: markdown},
-              {label: Description, name: description, widget: markdown}]}
+              {label: Description, name: description, widget: markdown}]}]}
       - file: "src/pages/ideas/index.md"
         label: "Ideas Page"
         name: "ideas"
