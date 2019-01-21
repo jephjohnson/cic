@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-//import box from '../../img/logo.png'
 const ReactMarkdown = require('react-markdown')
-
-
 
 class HowsPageTemplate extends React.Component {
 
@@ -26,7 +23,7 @@ class HowsPageTemplate extends React.Component {
   
   render() {
     const { full_image, heading, main } = this.props;
-    console.log(this.props.main)
+    //console.log(this.props.main)
     //const PageContent = contentComponent
 
 
@@ -55,36 +52,35 @@ class HowsPageTemplate extends React.Component {
 
     return (
       <div>
-      <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
-         <div className="container">
-            <div className="hero-body">
-              <div className="columns is-centered">
+        <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
+          <div className="container">
+              <div className="hero-body">
+                <div className="columns is-centered">
+                    <div className="column is-10-tablet is-9-desktop">
+                      <div className="columns">
+                          <div className="column">
+                              <ReactMarkdown className="title has-text-centered" source={ heading } />
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div className="columns is-centered">
                   <div className="column is-10-tablet is-9-desktop">
                     <div className="columns">
-                        <div className="column">
-                            <ReactMarkdown className="title has-text-centered" source={ heading } />
-                        </div>
+                        <div className="column has-text-centered arrow-wrapper">
+                          <span className="arrow"></span>
+                        </div> 
                     </div>
                   </div>
+                </div>
               </div>
-              <div className="columns is-centered">
-                <div className="column is-10-tablet is-9-desktop">
-                  <div className="columns">
-                      <div className="column has-text-centered arrow-wrapper">
-                        <span className="arrow"></span>
-                      </div> 
-                      <div className="speech-bubble"><p>Let's Talk</p></div>
-                  </div>
-                </div>
-                </div>
-            </div>
-         </div>
-       </section>
-       <section className="section">
-        <div className="container">
-          {Modules}
-        </div>
-      </section>
+          </div>
+        </section>
+        <section className="section">
+          <div className="container">
+            { Modules }
+          </div>
+        </section>
       </div>
     )
   }

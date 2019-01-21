@@ -130,7 +130,6 @@ export default class IndexPage extends React.Component {
 														<div className="column hero-copy">
 															<ReactMarkdown className="subtitle has-text-centered" source={ post.frontmatter.description } />
 														</div>
-														<div className="speech-bubble"><p>Let's Talk</p></div>
                         </div>
                         </div>
                     </div>

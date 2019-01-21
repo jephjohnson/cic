@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AboutPageTemplate = () => {
+const FooterPageTemplate = () => {
   return (
     <footer className="footer">
         <div className="columns is-centered footer-content">
@@ -38,4 +38,4 @@ const AboutPageTemplate = () => {
     </footer>
   )
 }
-export default AboutPageTemplate
+export default FooterPageTemplate

@@ -12,6 +12,7 @@ const CareersPage = ({ data }) => {
     <Layout>
       <CareersPageTemplate
         contentComponent={HTMLContent}
+        full_image={ post.frontmatter.full_image }
         title={post.frontmatter.title}
         content={post.html}
       />
@@ -31,6 +32,7 @@ export const careersPageQuery = graphql`
       html
       frontmatter {
         title
+        full_image
       }
     }
   }

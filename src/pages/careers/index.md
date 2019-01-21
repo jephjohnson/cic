@@ -1,5 +1,6 @@
 ---
 templateKey: careers-page
+full_image: /img/hero.jpg
 title: Careers our values
 ---
 ### **Shade-grown coffee**
