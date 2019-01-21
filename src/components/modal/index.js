@@ -23,7 +23,6 @@ class Modal extends React.Component {
   render() {
       const { data } = this.props
       const handleToUpdate  = this.props.handleToUpdate;
-      //console.log(data)
       return (
         <section className="section">
           <div className="container">

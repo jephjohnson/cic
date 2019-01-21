@@ -19,7 +19,6 @@ export default class IndexPage extends React.Component {
 
 	handleSort(value) {
 		this.setState(prevState => ({ childVisible: !prevState.childVisible, selectedIndex: value + 1 }));
-		//console.log(this.state.childVisible)
 	}
 
 	handleToUpdate = () => {

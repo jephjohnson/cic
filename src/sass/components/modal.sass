@@ -7,9 +7,17 @@
         width: 90%
         z-index: 4
         margin: 0 auto
+        
 
         +tablet
             width: 75%
 
     &-inner
         margin: 0 auto
+        animation: fadein 0.5s
+
+@keyframes fadein 
+    from
+        opacity: 0
+    to
+        opacity: 1
