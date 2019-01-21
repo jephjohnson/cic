@@ -42,9 +42,28 @@ collections:
         name: "hows"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "hows-page"}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Heading, name: heading, widget: markdown}
-          - {label: Description, name: description, widget: markdown}
+          - {label: "Full_image", name: "full_image", widget: "image"}
+          - {label: "Heading, name": "heading", widget: "markdown"}
+          - {label: "Description", name: "description", widget: "markdown"}
+          - {label: Main, name: main, widget: object, fields: 
+              {label: Image 1, name: image1, widget: object, fields: 
+              [{label: Image, name: image, widget: image},  
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: Subtitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 2, name: image2, widget: object, fields: 
+              [{label: Image, name: image, widget: image},   
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: Subtitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 3, name: image4, widget: object, fields: 
+              [{label: Image, name: image, widget: image}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: SubTitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}]}
       - file: "src/pages/ideas/index.md"
         label: "Ideas Page"
         name: "ideas"
